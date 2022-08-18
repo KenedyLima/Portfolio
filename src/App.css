@@ -27,7 +27,6 @@
   src: url("../src/fonts/Inter/static/Inter-Medium.ttf") format("truetype");
 }
 
-
 /* GENERAL */
 
 * {
@@ -38,6 +37,7 @@
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -51,11 +51,12 @@ body {
 }
 
 h2 {
-  color: #171717;
+  color: #881337;
   font-family: "Bold";
   text-transform: uppercase;
   font-size: 3rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 2.4rem;
+  letter-spacing: 1.2px;
 }
 
 h3 {
@@ -76,41 +77,48 @@ h3 {
 }
 
 .doc-section-text {
-
   position: absolute;
   right: 4.4rem;
   top: 50%;
   font-size: 1.4rem;
   writing-mode: vertical-lr;
-font-family: "bold";
+  font-family: "bold";
 }
 
 .doc-section-text:nth-child(odd) {
   color: #f0f9ff;
-  
 }
-
 
 .doc-section-text:nth-child(even) {
   color: #171717;
-  
 }
+
+.black-p {
+  color: #171717;
+}
+
+section {
+  padding: 6.2rem;
+  position: relative;
+}
+
 /* HERO SECTION */
 
 header {
   height: 100vh;
-  background: linear-gradient(90deg, #171717, #1e40af); 
+  background: linear-gradient(90deg, #171717, #1e40af);
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 6.2rem;
   position: relative;
 }
 
 .hero-title {
   text-transform: uppercase;
-  font-family: 'Black', 'sans-serif';
+  font-family: "Black", "sans-serif";
   font-size: 4.4rem;
-
+  /* letter-spacing: 1.2px; */
 }
 
 /* NAV-BAR */
@@ -122,18 +130,17 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: .4rem;
+  gap: 0.4rem;
   font-size: 1.4rem;
   border: 1px solid #f0f9ff;
   padding: 0.6rem 1.2rem;
   cursor: pointer;
 }
 
-
-
 .nav-bar {
-  align-self: flex-start;
-  justify-self: flex-start; 
+  position: absolute;
+  top: 6.2rem;
+  left: 6.2rem;
 }
 
 .nav-list {
@@ -156,10 +163,9 @@ header {
   content: "";
 
   transform: scale(1) translate(-45%, 0%);
-
 }
 
-.bar::before{
+.bar::before {
   background-color: #881337;
   height: 25px;
   width: 25px;
@@ -174,20 +180,15 @@ header {
   right: 3.2rem;
   top: 6.2rem;
   background-color: #881337;
-
 }
 
 .topless-bar {
   top: 0px;
 }
 
-
-
 /* ABOUT SECTION */
 
 .about-section {
-  padding: 6.2rem;
-  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -195,5 +196,30 @@ header {
 .about-script {
   color: #171717;
   font-size: 1.6rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.8rem;
+  line-height: 1.6;
+}
+
+.about-img-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.myself-photo {
+  width: 60%;
+}
+
+.typing-gif {
+  width: 50%;
+}
+
+.gif-desc {
+  font-size: 1.4rem;
+  color: #454545;
+}
+
+/* TECH SECTION */
+
+.tech-section {
+  background-color: #0c1a46;
 }
