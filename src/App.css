@@ -76,6 +76,10 @@ h3 {
   transform: translate(45%, -50%);
 }
 
+#first-doc-section-text {
+  top: calc(50% + 6.2rem - 2.5rem);
+}
+
 .doc-section-text {
   position: absolute;
   right: 4.4rem;
@@ -83,13 +87,14 @@ h3 {
   font-size: 1.4rem;
   writing-mode: vertical-lr;
   font-family: "bold";
+  transform: translateY(-50%);
 }
 
-.doc-section-text:nth-child(odd) {
+.doc-section-text:nth-child(2n-1) {
   color: #f0f9ff;
 }
 
-.doc-section-text:nth-child(even) {
+.doc-section-text:nth-child(2n) {
   color: #171717;
 }
 
@@ -98,7 +103,7 @@ h3 {
 }
 
 section {
-  padding: 6.2rem;
+  padding: 3.2rem 6.2rem 6.2rem 6.2rem;
   position: relative;
 }
 
@@ -218,8 +223,27 @@ header {
   color: #454545;
 }
 
-/* TECH SECTION */
+/* SKILLS SECTION */
 
-.tech-section {
+.skills-section {
   background-color: #0c1a46;
+}
+
+.skills-list {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.skill-desc-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.skill-logo {
+  height: 4rem;
+  width: 5rem;
 }
