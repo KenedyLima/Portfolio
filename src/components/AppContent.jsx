@@ -29,7 +29,7 @@ function AppContent() {
         </nav>
         <div className="hero-content">
           <h1 className="hero-title">
-            &lt;h1&gt;Hello, my name is Kenedy&lt;/h1&gt;
+            &lt;h1&gt;Olá, me chamo Kenedy&lt;/h1&gt;
           </h1>
         </div>
       </header>

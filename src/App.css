@@ -43,6 +43,7 @@ html {
 body {
   font-family: "Medium";
   color: #f0f9ff;
+  background-color: #d2d9ef;
   overflow-x: hidden;
 }
 
@@ -73,7 +74,7 @@ h3 {
   position: absolute;
   top: 0;
   right: 3.2rem;
-  transform: translate(45%, -50%);
+  transform: translate(calc(50% - 0.25rem), -50%);
 }
 
 #first-doc-section-text {
@@ -117,6 +118,7 @@ header {
   justify-content: center;
   padding: 6.2rem;
   position: relative;
+  overflow-y: hidden;
 }
 
 .hero-title {
@@ -167,10 +169,11 @@ header {
 .bar::before {
   content: "";
 
-  transform: scale(1) translate(-45%, 0%);
+  /* transform: translate(calc(-50% + 0.25rem), 0%); */
 }
 
-.bar::before {
+.bar::before,
+.bar::after {
   background-color: #881337;
   height: 25px;
   width: 25px;
@@ -180,8 +183,8 @@ header {
 
 .bar {
   position: absolute;
-  width: 5px;
-  height: 100%;
+  width: 0.5rem;
+  height: calc(100% - 6.2rem);
   right: 3.2rem;
   top: 6.2rem;
   background-color: #881337;
@@ -226,7 +229,7 @@ header {
 /* SKILLS SECTION */
 
 .skills-section {
-  background-color: #0c1a46;
+  /* background-color: #0c1a46; */
 }
 
 .skills-list {
@@ -241,6 +244,10 @@ header {
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
+}
+
+.skill-desc-wrapper span {
+  color: #171717;
 }
 
 .skill-logo {
