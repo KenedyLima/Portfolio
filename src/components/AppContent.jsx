@@ -31,6 +31,7 @@ function AppContent() {
           <h1 className="hero-title">
             &lt;h1&gt;Olá, me chamo Kenedy&lt;/h1&gt;
           </h1>
+          <h2>&lt;h2&gt;Crio Problemas&lt;/h2&gt;</h2>
         </div>
       </header>
       <section className="about-section" id="about">
@@ -70,7 +71,7 @@ function AppContent() {
         <span className="doc-section-text">Skills</span>
         <h2>Skills</h2>
         <ul className="skills-list">
-          <li>
+          <li className="skill">
             <div className="skill-desc-wrapper">
               <img
                 className="skill-logo"
@@ -79,8 +80,9 @@ function AppContent() {
               ></img>
               <span>Javascript</span>
             </div>
+            <div className="skill-bar"></div>
           </li>
-          <li>
+          <li className="skill">
             <div className="skill-desc-wrapper">
               <img
                 className="skill-logo"
@@ -89,8 +91,9 @@ function AppContent() {
               ></img>
               <span>Java</span>
             </div>
+            <div className="skill-bar"></div>
           </li>
-          <li>
+          <li className="skill">
             <div className="skill-desc-wrapper">
               <img
                 className="skill-logo"
@@ -99,8 +102,9 @@ function AppContent() {
               ></img>
               <span>Spring</span>
             </div>
+            <div className="skill-bar"></div>
           </li>
-          <li>
+          <li className="skill">
             <div className="skill-desc-wrapper">
               <img
                 className="skill-logo"
@@ -109,8 +113,9 @@ function AppContent() {
               ></img>
               <span>MySQL</span>
             </div>
+            <div className="skill-bar"></div>
           </li>
-          <li>
+          <li className="skill">
             <div className="skill-desc-wrapper">
               <img
                 className="skill-logo"
@@ -119,9 +124,10 @@ function AppContent() {
               ></img>
               <span>Firebase</span>
             </div>
+            <div className="skill-bar"></div>
           </li>
 
-          <li>
+          <li className="skill">
             <div className="skill-desc-wrapper">
               <img
                 className="skill-logo"
@@ -130,8 +136,9 @@ function AppContent() {
               ></img>
               <span>TypeScript</span>
             </div>
+            <div className="skill-bar"></div>
           </li>
-          <li>
+          <li className="skill">
             <div className="skill-desc-wrapper">
               <img
                 className="skill-logo"
@@ -140,6 +147,7 @@ function AppContent() {
               ></img>
               <span>React</span>
             </div>
+            <div className="skill-bar"></div>
           </li>
         </ul>
       </section>

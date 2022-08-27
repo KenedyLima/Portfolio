@@ -43,7 +43,7 @@ html {
 body {
   font-family: "Medium";
   color: #f0f9ff;
-  background-color: #d2d9ef;
+  background-image: linear-gradient(180deg, #060d23, #0a1538, #0c1a46);
   overflow-x: hidden;
 }
 
@@ -112,7 +112,7 @@ section {
 
 header {
   height: 100vh;
-  background: linear-gradient(90deg, #171717, #1e40af);
+  /* background: linear-gradient(90deg, #1e40af, #1e40af); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -169,7 +169,7 @@ header {
 .bar::before {
   content: "";
 
-  /* transform: translate(calc(-50% + 0.25rem), 0%); */
+  transform: translate(calc(-50% + 0.25rem), 0%);
 }
 
 .bar::before,
@@ -234,23 +234,39 @@ header {
 
 .skills-list {
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4.8rem;
+  align-items: start;
+  padding: 1.6rem;
+}
+
+.skill {
   display: flex;
-  gap: 3rem;
+  align-items: center;
 }
 
 .skill-desc-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 0.6rem;
 }
 
 .skill-desc-wrapper span {
   color: #171717;
+  display: inline-block;
 }
 
 .skill-logo {
   height: 4rem;
   width: 5rem;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 1rem;
+  background: black;
+  margin: 1.6rem;
+  border-radius: 2.5rem;
 }
