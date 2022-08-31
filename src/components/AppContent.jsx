@@ -3,7 +3,8 @@ import typingGif from "../images/R.gif";
 import myselfPhoto from "../images/me.jpg";
 
 // import { LanguageOutline } from "react-ionicons";
-function AppContent() {
+function AppContent({ languages }) {
+  console.log(languages);
   return (
     <div className="container">
       <header className="main-header">
@@ -28,10 +29,12 @@ function AppContent() {
           </ul>
         </nav>
         <div className="hero-content">
-          <h1 className="hero-title">
-            &lt;h1&gt;Olá, me chamo Kenedy&lt;/h1&gt;
-          </h1>
-          <h2>&lt;h2&gt;Crio Problemas&lt;/h2&gt;</h2>
+          <h1 className="hero-title">Olá, me chamo Kenedy</h1>
+          <h2 className="hero-subtitle">
+            <span className="subtitle-span">Solucionador&nbsp;</span>
+            <span className="active-word subtitle-span">Inventor&nbsp;</span>
+            de Problemas
+          </h2>
         </div>
       </header>
       <section className="about-section" id="about">
