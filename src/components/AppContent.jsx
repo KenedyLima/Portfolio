@@ -16,16 +16,19 @@ function AppContent({ languages }) {
           <span>Language</span>
         </div>
         <nav className="nav-bar">
-          {" "}
           <ul className="nav-list">
             <li>
               <a href="#about">About</a>
             </li>
             <li>
-              <a href="#skills">Tech</a>
+              <a href="#skills">Skills</a>
             </li>
-            <li>Projects</li>
-            <li>Contacts</li>
+            <li href="">
+              <a href="#projects">projects</a>
+            </li>
+            <li>
+              <a href="#contacts">Contacts</a>
+            </li>
           </ul>
         </nav>
         <div className="hero-content">
@@ -60,10 +63,10 @@ function AppContent({ languages }) {
             I am a excellent seacher (googler), so i am prepared to face and
             accept any challenge.
           </p>
-          <div className="gif-desc-wrapper">
+          {/* <div className="gif-desc-wrapper">
             <img src={typingGif} className="typing-gif" alt="" />
             <p className="gif-desc">Me googling as a pro</p>
-          </div>
+          </div> */}
         </div>
         <div className="about-img-wrapper">
           {/* <img className="myself-photo" src={myselfPhoto} alt="" ></img> */}
@@ -153,6 +156,16 @@ function AppContent({ languages }) {
             <div className="skill-bar"></div>
           </li>
         </ul>
+      </section>
+      <section className="projects-section" id="projects">
+        <div className="section-separator"></div>
+        <span className="doc-section-text">Projects</span>
+        <h2>Projects</h2>
+      </section>
+      <section className="contacts-section" id="contacts">
+        <div className="section-separator"></div>
+        <span className="doc-section-text">Skills</span>
+        <h2>Contacts</h2>
       </section>
       <div className="bar"></div>
     </div>

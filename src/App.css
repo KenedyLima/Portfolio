@@ -89,14 +89,7 @@ h3 {
   writing-mode: vertical-lr;
   font-family: "bold";
   transform: translateY(-50%);
-}
-
-.doc-section-text:nth-child(2n-1) {
   color: #f0f9ff;
-}
-
-.doc-section-text:nth-child(2n) {
-  color: #171717;
 }
 
 /* .black-p {
@@ -193,10 +186,41 @@ header {
   font-size: 1.4rem;
 }
 
-.nav-list li a {
+.nav-list li a:link,
+.nav-list li a:visited {
   cursor: pointer;
   text-decoration: none;
   color: #f0f9ff;
+  border-bottom: 1px solid transparent;
+  padding: 0.5rem;
+}
+
+.nav-list li {
+  position: relative;
+}
+
+.nav-list li a:link::before {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  bottom: -7px;
+  background-color: transparent;
+}
+.nav-list li a:hover::before {
+  animation: stretchBorder 0.3s ease-in-out forwards;
+  content: "";
+  background-color: #942b4b;
+}
+
+@keyframes stretchBorder {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 50%;
+  }
 }
 
 /* BAR */
