@@ -1,111 +1,7 @@
-/* 
-  COLORS: 
-    MAIN: #1e40af
-    SECONDARY: #881337
-    GREY: #171717
-    WHITE: #f0f9ff
-
-  FONT'S SIZES:
-    5rem, 3rem
-
-
-*/
-
-/* FONTS */
-@font-face {
-  font-family: "Black";
-  src: url("../src/fonts/Inter/static/Inter-Black.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Bold";
-  src: url("../src/fonts/Inter/static/Inter-Bold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Medium";
-  src: url("../src/fonts/Inter/static/Inter-Medium.ttf") format("truetype");
-}
-
-/* GENERAL */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 10px;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Medium";
-  color: #f0f9ff;
-  background-image: linear-gradient(135deg, #060d23f6, #0a1538, #0c1a46);
-  overflow-x: hidden;
-}
-
-.container {
-  position: relative;
-}
-
-h2 {
-  color: #881337;
-  font-family: "Bold";
-  text-transform: uppercase;
-  font-size: 3rem;
-  margin-bottom: 2.4rem;
-  letter-spacing: 1.2px;
-}
-
-h3 {
-  color: #171717;
-  font-family: "Medium";
-  font-size: 2.4rem;
-}
-.section-separator {
-  background-color: #881337;
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  right: 3.2rem;
-  transform: translate(calc(50% - 0.25rem), -50%);
-}
-
-#first-doc-section-text {
-  top: calc(50% + 6.2rem - 2.5rem);
-}
-
-.doc-section-text {
-  position: absolute;
-  right: 4.4rem;
-  top: 50%;
-  font-size: 1.4rem;
-  writing-mode: vertical-lr;
-  font-family: "bold";
-  transform: translateY(-50%);
-  color: #f0f9ff;
-}
-
-/* .black-p {
-  color: #171717;
-} */
-
-section {
-  padding: 3.2rem 6.2rem 6.2rem 6.2rem;
-  position: relative;
-}
-
 /* HERO SECTION */
 
 header {
   height: 100vh;
-  /* background: linear-gradient(90deg, #1e40af, #1e40af); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,11 +19,11 @@ header {
 .hero-subtitle span {
   color: #881337;
 }
+
 .hero-title {
   text-transform: uppercase;
   font-family: "Black", "sans-serif";
   font-size: 4.4rem;
-  /* letter-spacing: 1.2px; */
 }
 
 .subtitle-span {
@@ -156,6 +52,14 @@ header {
   }
 }
 
+.coffee-icon {
+  height: 3.6rem;
+  width: 3.6rem;
+  position: absolute;
+  top: 3.2rem;
+  left: 3.2rem;
+}
+
 /* NAV-BAR */
 
 .language-box {
@@ -170,12 +74,14 @@ header {
   border: 1px solid #f0f9ff;
   padding: 0.6rem 1.2rem;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .nav-bar {
   position: absolute;
-  top: 6.2rem;
-  left: 6.2rem;
+  top: 3.2rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav-list {
@@ -226,7 +132,7 @@ header {
 /* BAR */
 
 .bar::before {
-  content: "1";
+  content: "";
   text-align: center;
   display: inline-block;
   transform: translate(calc(-50% + 0.25rem), 0%);
@@ -245,7 +151,7 @@ header {
   position: absolute;
   width: 0.5rem;
   height: calc(100% - 6.2rem);
-  right: 3.2rem;
+  right: 1.8rem;
   top: 6.2rem;
   background-color: #881337;
 }
@@ -258,38 +164,51 @@ header {
 
 .about-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
+}
+
+.about-section .text-card,
+.about-section .image-card {
+  border-radius: 10px;
+}
+
+.about-section .text-card {
+  background-image: linear-gradient(
+    0deg,
+    rgb(12, 25, 70),
+    rgba(148, 43, 74, 0.4),
+    rgb(12, 25, 70)
+  );
+  padding: 7.2rem;
+}
+
+.text-card p {
+  margin-right: 4.8rem;
+}
+
+.text-card h2 {
+  color: #f0f9ff;
+}
+.about-section .image-card {
+  align-self: center;
+  height: 80%;
+  margin-left: -4.8rem;
+  transform: rotateZ(5deg);
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("../images/me.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 30px 30px 50px rgba(0, 0, 0, 0.411);
 }
 
 .about-script {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-bottom: 1.8rem;
   line-height: 1.6;
 }
 
-.about-img-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.myself-photo {
-  width: 60%;
-}
-
-.typing-gif {
-  width: 50%;
-}
-
-.gif-desc {
-  font-size: 1.4rem;
-  color: #454545;
-}
-
 /* SKILLS SECTION */
-
-.skills-section {
-  /* background-color: #0c1a46; */
-}
 
 .skills-list {
   list-style: none;

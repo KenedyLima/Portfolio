@@ -12,9 +12,14 @@ function AppContent({ languages }) {
           Introduction
         </span>
         <div className="language-box">
-          {/* <LanguageOutline width="20px" color="#f0f9ff" /> */}
+          <ion-icon name="language-outline"></ion-icon>
           <span>Language</span>
         </div>
+        <img
+          className="coffee-icon"
+          src={require("../images/coffee-cup.png")}
+          alt=""
+        />
         <nav className="nav-bar">
           <ul className="nav-list">
             <li>
@@ -43,8 +48,9 @@ function AppContent({ languages }) {
       <section className="about-section" id="about">
         <div className="section-separator"></div>
         <span className="doc-section-text">About</span>
-        <div className="about-text-wrapper">
-          <h2>About</h2>
+
+        <div className="text-card">
+          <h2>Know me</h2>
           <p className="about-script">
             Wassup! I am Kenedy Lima, Back End Junior Developer, great thinker
             and creative as needed.
@@ -63,14 +69,17 @@ function AppContent({ languages }) {
             I am a excellent seacher (googler), so i am prepared to face and
             accept any challenge.
           </p>
-          {/* <div className="gif-desc-wrapper">
-            <img src={typingGif} className="typing-gif" alt="" />
-            <p className="gif-desc">Me googling as a pro</p>
-          </div> */}
+          <p className="about-script">
+            Different perspectives is the THING to me. Since better results
+            comes from different experiences, share and get feedback is a good
+            way of improvement.
+          </p>
+          <p className="about-script">
+            I am a excellent seacher (googler), so i am prepared to face and
+            accept any challenge.
+          </p>
         </div>
-        <div className="about-img-wrapper">
-          {/* <img className="myself-photo" src={myselfPhoto} alt="" ></img> */}
-        </div>
+        <div className="image-card"></div>
       </section>
       <section className="skills-section" id="skills">
         <div className="section-separator"></div>

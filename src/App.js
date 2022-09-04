@@ -1,4 +1,5 @@
-import "./App.css";
+import "./css/App.css";
+import "./css/General.css";
 import React, { useEffect, useState } from "react";
 import AppContent from "./components/AppContent";
 
