@@ -1,4 +1,3 @@
-"use strict";
 import "./css/App.css";
 import "./css/General.css";
 import React, { useEffect, useState } from "react";
@@ -146,7 +145,7 @@ function languageSwitcher() {
       languages.forEach((language) => {
         language.classList.toggle("chosen-language");
       });
-      if (e.target.textContent == "EN") loadLanguageContent("english");
+      if (e.target.textContent === "EN") loadLanguageContent("english");
       else loadLanguageContent("portuguese");
     }
   });

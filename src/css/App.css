@@ -271,3 +271,48 @@ header {
   margin: 1.6rem;
   border-radius: 2.5rem;
 }
+
+/* PROJECTS SECTION */
+
+.projects-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-apresentation {
+  width: 80rem;
+  height: 40rem;
+  background: rgba(0, 0, 0, 0.342);
+  position: relative;
+}
+
+.project img {
+  height: 100%;
+  width: 100%;
+}
+.previous-button {
+  left: calc(50% - 40rem);
+  z-index: 5;
+  transform: translate(-50%, 50%);
+}
+
+.button {
+  position: absolute;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 25px;
+  background-color: #942b4a;
+  border: none;
+  top: 50%;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: rgba(148, 43, 74, 0.781);
+}
+.next-button {
+  right: calc(50% - 40rem);
+  transform: translate(50%, 50%);
+}
