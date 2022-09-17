@@ -297,22 +297,57 @@ header {
   transform: translate(-50%, 50%);
 }
 
-.button {
+.slide-button {
   position: absolute;
+  top: 50%;
   height: 5rem;
   width: 5rem;
   border-radius: 25px;
   background-color: #942b4a;
+  opacity: 70%;
   border: none;
-  top: 50%;
   cursor: pointer;
-  transition: 0.2s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
-.button:hover {
-  background-color: rgba(148, 43, 74, 0.781);
+.slide-button:hover {
+  opacity: 100%;
 }
 .next-button {
   right: calc(50% - 40rem);
   transform: translate(50%, 50%);
+}
+
+[name="caret-back-outline"],
+[name="caret-forward-outline"] {
+  color: #f0f9ff;
+  font-size: 2.4rem;
+}
+
+.project {
+  display: none;
+  transition: all 0.2s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.current-project {
+  display: block;
+  transform: translateX(0);
+}
+
+.dots-container {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  gap: 1.8rem;
+}
+
+.dot {
+  color: #f0f9ff;
+  font-size: 3rem;
+  border-radius: 25px;
+}
+
+.active-dot {
+  color: #881337;
 }

@@ -121,13 +121,14 @@ function App() {
   //   loadBytesOfCodeOfRepositories();
   // }, []);
   useEffect(() => {
-    languageSwitcher();
-    heroSubTitleAnimation();
+    listenToLanguageSwitcher();
+    startHeroSubTitleAnimation();
+    listenToProjectSlideButtons();
   }, []);
   return <AppContent programmingLanguages={langBytesOfCode} />;
 }
 
-function heroSubTitleAnimation() {
+function startHeroSubTitleAnimation() {
   const spans = document.querySelectorAll(".subtitle-span");
 
   setInterval(() => {
@@ -137,7 +138,7 @@ function heroSubTitleAnimation() {
   }, 2000);
 }
 
-function languageSwitcher() {
+function listenToLanguageSwitcher() {
   const languagesContainer = document.querySelector(".languages-container");
   const languages = document.querySelectorAll(".language");
   languagesContainer.addEventListener("click", (e) => {
@@ -184,4 +185,29 @@ function languageSwitcher() {
   }
 }
 
+function listenToProjectSlideButtons() {
+  const buttons = document.querySelectorAll(".slide-button");
+  const projects = document.querySelectorAll(".project");
+  let nextProjectId = 0;
+  buttons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const currentProjectId = Number(
+        document.querySelector(".current-project").getAttribute("project-id")
+      );
+
+      const buttonEle = e.target.closest(".slide-button");
+      if (buttonEle.classList.contains("next-button"))
+        nextProjectId = currentProjectId + 1;
+      else {
+        nextProjectId = currentProjectId - 1;
+      }
+      projects.forEach((project) => {
+        project.classList.remove(".current-project");
+        if (project.getAttribute("project-id") === nextProjectId)
+          project.classList.add(".current-project");
+      });
+      console.log(nextProjectId);
+    });
+  });
+}
 export default App;
