@@ -1,6 +1,7 @@
 import React from "react";
 import mapty from "../images/MaptyProject.png";
 import omnifood from "../images/OmnifoodProject.png";
+import forkify from "../images/ForkifyProject.png";
 export default function Projects() {
   return (
     <section className="projects-section" id="projects">
@@ -18,14 +19,21 @@ export default function Projects() {
           <h3>Mapty</h3>
           <p className="project-description"></p>
 
-          <div className="project-apresentation" id="project-1">
+          <div className="project-apresentation">
             <img src={mapty} alt="" />
           </div>
         </div>
-        <div className="project" project-id="1">
+        <div className="project" project-id="2">
           <h3>Omnifood</h3>
-          <div className="project-apresentation" id="project-1">
+          <div className="project-apresentation">
             <img src={omnifood} alt="" />
+          </div>
+          <p className="project-description"></p>
+        </div>
+        <div className="project" project-id="3">
+          <h3>Forkify</h3>
+          <div className="project-apresentation">
+            <img src={forkify} alt="" />
           </div>
           <p className="project-description"></p>
         </div>
@@ -37,9 +45,9 @@ export default function Projects() {
           ></ion-icon>
         </button>
         <ul className="dots-container">
-          <li className="dot active-dot"></li>
-          <li className="dot"></li>
-          <li className="dot"></li>
+          <li className="dot active-dot" id="1"></li>
+          <li className="dot" id="2"></li>
+          <li className="dot" id="3"></li>
         </ul>
       </div>
     </section>

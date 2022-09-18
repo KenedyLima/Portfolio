@@ -124,6 +124,7 @@ function App() {
     listenToLanguageSwitcher();
     startHeroSubTitleAnimation();
     listenToProjectSlideButtons();
+    listenToProjectsDots();
   }, []);
   return <AppContent programmingLanguages={langBytesOfCode} />;
 }
@@ -137,6 +138,28 @@ function startHeroSubTitleAnimation() {
     });
   }, 2000);
 }
+
+function updateActiveDot(id) {
+  const dots = document.querySelectorAll(".dot");
+  dots.forEach((dot) => {
+    dot.classList.remove("active-dot");
+    if (Number(dot.getAttribute("id")) === id) dot.classList.add("active-dot");
+  });
+}
+
+function updateCurrentProject(id) {
+  const projects = document.querySelectorAll(".project");
+  projects.forEach((project) => {
+    project.classList.remove("current-project");
+    if (Number(project.getAttribute("project-id")) === id)
+      project.classList.add("current-project");
+  });
+}
+
+function setProjectApresentationTranslateXPosition(projects) {
+  projects.forEach();
+}
+// EVENT LISTENERS
 
 function listenToLanguageSwitcher() {
   const languagesContainer = document.querySelector(".languages-container");
@@ -194,20 +217,35 @@ function listenToProjectSlideButtons() {
       const currentProjectId = Number(
         document.querySelector(".current-project").getAttribute("project-id")
       );
-
       const buttonEle = e.target.closest(".slide-button");
       if (buttonEle.classList.contains("next-button"))
-        nextProjectId = currentProjectId + 1;
-      else {
-        nextProjectId = currentProjectId - 1;
-      }
+        nextProjectId =
+          currentProjectId + 1 > projects.length ? 1 : currentProjectId + 1;
+      else
+        nextProjectId =
+          currentProjectId - 1 < 1 ? projects.length : currentProjectId - 1;
+
       projects.forEach((project) => {
-        project.classList.remove(".current-project");
-        if (project.getAttribute("project-id") === nextProjectId)
-          project.classList.add(".current-project");
+        project.classList.remove("current-project");
+        if (Number(project.getAttribute("project-id")) === nextProjectId) {
+          project.classList.add("current-project");
+        }
       });
-      console.log(nextProjectId);
+      updateActiveDot(nextProjectId);
     });
   });
 }
+
+function listenToProjectsDots() {
+  const dots = document.querySelectorAll(".dot");
+  dots.forEach((dot) => {
+    dot.addEventListener("click", (e) => {
+      console.log("executing");
+      const dotId = Number(dot.getAttribute("id"));
+      updateCurrentProject(dotId);
+      updateActiveDot(dotId);
+    });
+  });
+}
+
 export default App;

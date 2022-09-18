@@ -278,6 +278,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  gap: 1.2rem;
 }
 
 .project-apresentation {
@@ -290,6 +292,7 @@ header {
 .project img {
   height: 100%;
   width: 100%;
+  border-radius: 5px;
 }
 .previous-button {
   left: calc(50% - 40rem);
@@ -325,14 +328,23 @@ header {
 }
 
 .project {
-  display: none;
-  transition: all 0.2s ease-in-out;
-  transform: translateX(-100%);
+  display: block;
+}
+
+[project-id="1"] {
+  transform: translateX(0%);
+}
+
+[project-id="2"] {
+  transform: translateX(0%);
+}
+
+[project-id="3"] {
+  transform: translateX(0%);
 }
 
 .current-project {
   display: block;
-  transform: translateX(0);
 }
 
 .dots-container {
@@ -346,6 +358,7 @@ header {
   color: #f0f9ff;
   font-size: 3rem;
   border-radius: 25px;
+  cursor: pointer;
 }
 
 .active-dot {
