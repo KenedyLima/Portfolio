@@ -329,22 +329,10 @@ header {
 
 .project {
   display: block;
-}
-
-[project-id="1"] {
-  transform: translateX(0%);
-}
-
-[project-id="2"] {
-  transform: translateX(0%);
-}
-
-[project-id="3"] {
-  transform: translateX(0%);
+  transform: translate(-10%);
 }
 
 .current-project {
-  display: block;
 }
 
 .dots-container {
