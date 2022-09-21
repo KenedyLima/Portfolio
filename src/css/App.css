@@ -24,7 +24,7 @@ header {
   display: inline-block;
 }
 
-.hero-subtitle .hero-english-subtitle-text {
+.hero-subtitle .hero-portuguese-subtitle-text {
   display: none;
 }
 
@@ -275,11 +275,18 @@ header {
 /* PROJECTS SECTION */
 
 .projects-container {
-  display: flex;
+  display: grid;
+  grid-template-rows: 2;
+  grid-template-columns: repeat(1fr, 3);
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  gap: 1.2rem;
+}
+
+.project {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  display: none;
 }
 
 .project-apresentation {
@@ -289,11 +296,47 @@ header {
   position: relative;
 }
 
+.current-project {
+  display: block;
+}
+
+.next-slide {
+  animation: nextSlideAnimation 1s ease-in;
+}
+
+.previous-slide {
+  animation: previousSlideAnimation 0.8s ease-in;
+}
+@keyframes nextSlideAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-15%);
+  }
+
+  50% {
+    opacity: 100%;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes previousSlideAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(15%);
+  }
+
+  50% {
+    opacity: 100%;
+    transform: translateX(0%);
+  }
+}
+
 .project img {
   height: 100%;
   width: 100%;
   border-radius: 5px;
 }
+
 .previous-button {
   left: calc(50% - 40rem);
   z-index: 5;
@@ -325,14 +368,6 @@ header {
 [name="caret-forward-outline"] {
   color: #f0f9ff;
   font-size: 2.4rem;
-}
-
-.project {
-  display: block;
-  transform: translate(-10%);
-}
-
-.current-project {
 }
 
 .dots-container {

@@ -15,7 +15,7 @@ export default function Projects() {
             name="caret-back-outline"
           ></ion-icon>
         </button>
-        <div className="project current-project" project-id="1">
+        <div className="project " project-id="0">
           <h3>Mapty</h3>
           <p className="project-description"></p>
 
@@ -23,14 +23,14 @@ export default function Projects() {
             <img src={mapty} alt="" />
           </div>
         </div>
-        <div className="project" project-id="2">
+        <div className="project current-project" project-id="1">
           <h3>Omnifood</h3>
           <div className="project-apresentation">
             <img src={omnifood} alt="" />
           </div>
           <p className="project-description"></p>
         </div>
-        <div className="project" project-id="3">
+        <div className="project" project-id="2">
           <h3>Forkify</h3>
           <div className="project-apresentation">
             <img src={forkify} alt="" />

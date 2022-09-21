@@ -37,16 +37,16 @@ export default function Hero() {
           </ul>
         </nav>
         <div className="languages-container">
-          <span className="language">EN</span>
-          <span className="language chosen-language">PT</span>
+          <span className="language chosen-language">EN</span>
+          <span className="language">PT</span>
         </div>
       </div>
       <div className="hero-content">
-        <h1 className="hero-title">Olá, me chamo Kenedy</h1>
+        <h1 className="hero-title">Hello, my name is Kenedy</h1>
         <h2 className="hero-subtitle">
           <p className="hero-english-subtitle-text">problem&nbsp;</p>
-          <span className="subtitle-span">Solucionador</span>
-          <span className="active-word subtitle-span">Inventor</span>
+          <span className="subtitle-span">Solver</span>
+          <span className="active-word subtitle-span">Creator</span>
           <p className="hero-portuguese-subtitle-text">&nbsp;de problemas</p>
         </h2>
       </div>
