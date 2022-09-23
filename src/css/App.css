@@ -183,7 +183,9 @@ header {
   top: 0px;
 }
 
+/*****************/
 /* ABOUT SECTION */
+/*****************/
 
 .about-section {
   display: grid;
@@ -231,7 +233,9 @@ header {
   line-height: 1.6;
 }
 
+/******************/
 /* SKILLS SECTION */
+/******************/
 
 .skills-list {
   list-style: none;
@@ -272,11 +276,13 @@ header {
   border-radius: 2.5rem;
 }
 
+/********************/
 /* PROJECTS SECTION */
+/********************/
 
 .projects-container {
   display: grid;
-  grid-template-rows: 2;
+  grid-template-rows: 3;
   grid-template-columns: repeat(1fr, 3);
   align-items: center;
   justify-content: center;
@@ -286,6 +292,7 @@ header {
   grid-column-start: 1;
   grid-column-end: -1;
   grid-row-start: 1;
+  grid-row-end: 2;
   display: none;
 }
 
@@ -293,7 +300,6 @@ header {
   width: 80rem;
   height: 40rem;
   background: rgba(0, 0, 0, 0.342);
-  position: relative;
 }
 
 .current-project {
@@ -371,8 +377,7 @@ header {
 }
 
 .dots-container {
-  position: absolute;
-  bottom: 0;
+  justify-self: center;
   display: flex;
   gap: 1.8rem;
 }
@@ -386,4 +391,44 @@ header {
 
 .active-dot {
   color: #881337;
+}
+
+/********************/
+/* CONTACTS SECTION */
+/********************/
+
+.social-media-container {
+  list-style: none;
+  font-size: 1.6rem;
+  display: flex;
+  gap: 3.2rem;
+}
+
+.social-media a {
+  display: flex;
+  gap: 0.8rem;
+  border: #881337;
+  background-color: #881337;
+  padding: 1.6rem 3.2rem;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+[name="logo-github"],
+[name="logo-linkedin"] {
+  font-size: 2rem;
+}
+
+.social-media a:link,
+.social-media a:visited {
+  color: #f0f9ff;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-media a:hover,
+.social-media a:active {
+  color: #881337;
+  background-color: #f0f9ff;
 }

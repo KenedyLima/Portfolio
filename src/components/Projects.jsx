@@ -45,9 +45,9 @@ export default function Projects() {
           ></ion-icon>
         </button>
         <ul className="dots-container">
+          <li className="dot" id="0"></li>
           <li className="dot active-dot" id="1"></li>
           <li className="dot" id="2"></li>
-          <li className="dot" id="3"></li>
         </ul>
       </div>
     </section>

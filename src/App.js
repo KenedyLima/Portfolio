@@ -249,6 +249,7 @@ function getNextSlide(newCurrentProjectId, projects) {
   });
   projects[newCurrentProjectId].classList.add("next-slide");
   projects[newCurrentProjectId].classList.add("current-project");
+  updateActiveDot(newCurrentProjectId);
 }
 
 function getPreviousSlide(newCurrentProjectId, projects) {
@@ -258,6 +259,7 @@ function getPreviousSlide(newCurrentProjectId, projects) {
   });
   projects[newCurrentProjectId].classList.add("previous-slide");
   projects[newCurrentProjectId].classList.add("current-project");
+  updateActiveDot(newCurrentProjectId);
 }
 function listenToProjectsDots() {
   const dots = document.querySelectorAll(".dot");
