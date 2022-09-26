@@ -124,7 +124,7 @@ function App() {
     listenToLanguageSwitcher();
     startHeroSubTitleAnimation();
     listenToProjectSlideButtons();
-    // listenToProjectsDots();
+    listenToProjectsDots();
   }, []);
   return <AppContent programmingLanguages={langBytesOfCode} />;
 }
@@ -139,13 +139,6 @@ function startHeroSubTitleAnimation() {
   }, 2000);
 }
 
-function updateActiveDot(id) {
-  const dots = document.querySelectorAll(".dot");
-  dots.forEach((dot) => {
-    dot.classList.remove("active-dot");
-    if (Number(dot.getAttribute("id")) === id) dot.classList.add("active-dot");
-  });
-}
 // EVENT LISTENERS
 
 function listenToLanguageSwitcher() {
@@ -231,40 +224,44 @@ function listenToProjectSlideButtons() {
       if (buttonElement.classList.contains("next-button")) {
         newCurrentProjectId =
           currentProjectId >= projects.length - 1 ? 0 : currentProjectId + 1;
-        getNextSlide(newCurrentProjectId, projects);
       } else {
         newCurrentProjectId =
           currentProjectId === 0 ? projects.length - 1 : currentProjectId - 1;
-        getPreviousSlide(newCurrentProjectId, projects);
       }
-      console.log(newCurrentProjectId);
+      getSlide(newCurrentProjectId);
     });
   });
 }
 
-function getNextSlide(newCurrentProjectId, projects) {
+function listenToProjectsDots() {
+  const dots = document.querySelectorAll(".dot");
+  dots.forEach((dot) => {
+    dot.addEventListener("click", (e) => {
+      const newDotId = Number(e.target.getAttribute("id"));
+      getSlide(newDotId);
+      updateActiveDot(newDotId);
+    });
+  });
+}
+
+// HELPERS
+
+function getSlide(newCurrentProjectId) {
+  const projects = document.querySelectorAll(".project");
   projects.forEach((project) => {
     project.classList.remove("current-project");
     project.classList.remove("next-slide");
   });
-  projects[newCurrentProjectId].classList.add("next-slide");
+  projects[newCurrentProjectId].classList.add("slide-animation");
   projects[newCurrentProjectId].classList.add("current-project");
   updateActiveDot(newCurrentProjectId);
 }
 
-function getPreviousSlide(newCurrentProjectId, projects) {
-  projects.forEach((project) => {
-    project.classList.remove("current-project");
-    project.classList.remove("previous-slide");
-  });
-  projects[newCurrentProjectId].classList.add("previous-slide");
-  projects[newCurrentProjectId].classList.add("current-project");
-  updateActiveDot(newCurrentProjectId);
-}
-function listenToProjectsDots() {
+function updateActiveDot(id) {
   const dots = document.querySelectorAll(".dot");
   dots.forEach((dot) => {
-    dot.addEventListener("click", (e) => {});
+    dot.classList.remove("active-dot");
+    if (Number(dot.getAttribute("id")) === id) dot.classList.add("active-dot");
   });
 }
 

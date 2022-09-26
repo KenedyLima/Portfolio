@@ -237,11 +237,12 @@ header {
 /* SKILLS SECTION */
 /******************/
 
-.skills-list {
+.skills-container .hard {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4.8rem;
+  row-gap: 9.8rem;
   align-items: start;
   padding: 1.6rem;
 }
@@ -271,14 +272,48 @@ header {
 .skill-bar {
   width: 100%;
   height: 1rem;
-  background: black;
   margin: 1.6rem;
   border-radius: 2.5rem;
+  background: black;
+}
+
+#firebase .skill-bar .completed {
+  background: #881337;
+  width: 70%;
+  height: 1rem;
+  border-radius: 2.5rem;
+}
+
+.skill-bar::after {
+  content: "100%";
+}
+
+.skill-type-switcher {
+  display: flex;
+  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.4rem;
+  gap: 1.8rem;
+  text-transform: uppercase;
 }
 
 /********************/
 /* PROJECTS SECTION */
 /********************/
+
+.projects-section p {
+  margin-bottom: 4.8rem;
+  font-size: 1.6rem;
+}
+
+.projects-section h2 {
+  margin-bottom: 2rem;
+}
+
+.projects-section h3 {
+  margin-bottom: 0.8rem;
+}
 
 .projects-container {
   display: grid;
@@ -286,6 +321,24 @@ header {
   grid-template-columns: repeat(1fr, 3);
   align-items: center;
   justify-content: center;
+}
+
+.repository-link:link,
+.repository-link:visited {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #f0f9ff;
+  border-bottom: 2px #f0f9ff solid;
+  display: inline-block;
+  margin-bottom: 3.6rem;
+  padding-bottom: 0.4rem;
+  transition: 0.3s ease-in-out;
+}
+
+.repository-link:hover,
+.repository-link:active {
+  color: #942b4b;
+  border-bottom: transparent 2px solid;
 }
 
 .project {
@@ -306,34 +359,26 @@ header {
   display: block;
 }
 
-.next-slide {
-  animation: nextSlideAnimation 1s ease-in;
-}
-
-.previous-slide {
+.slide-animation {
   animation: previousSlideAnimation 0.8s ease-in;
 }
 @keyframes nextSlideAnimation {
   0% {
     opacity: 0;
-    transform: translateX(-15%);
   }
 
   50% {
     opacity: 100%;
-    transform: translateX(0%);
   }
 }
 
 @keyframes previousSlideAnimation {
   0% {
     opacity: 0;
-    transform: translateX(15%);
   }
 
   50% {
     opacity: 100%;
-    transform: translateX(0%);
   }
 }
 
@@ -351,7 +396,7 @@ header {
 
 .slide-button {
   position: absolute;
-  top: 50%;
+  bottom: calc(6.2rem + 3.6rem + 20rem);
   height: 5rem;
   width: 5rem;
   border-radius: 25px;
@@ -365,6 +410,7 @@ header {
 .slide-button:hover {
   opacity: 100%;
 }
+
 .next-button {
   right: calc(50% - 40rem);
   transform: translate(50%, 50%);
@@ -431,4 +477,32 @@ header {
 .social-media a:active {
   color: #881337;
   background-color: #f0f9ff;
+}
+
+.send-email-card {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: black;
+  padding: 3.2rem;
+}
+
+.send-email-card h2 {
+  text-align: center;
+}
+
+.label-input {
+  display: flex;
+  margin-top: 1.6rem;
+  gap: 0.8rem;
+  flex-direction: column;
+}
+
+form label {
+  font-size: 1.6rem;
+}
+
+form input {
+  border-radius: 25px;
+  padding: 1.6rem;
 }
