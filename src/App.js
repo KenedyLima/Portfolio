@@ -125,10 +125,14 @@ function App() {
     startHeroSubTitleAnimation();
     listenToProjectSlideButtons();
     listenToProjectsDots();
+    (function () {
+      let cpr = document.getElementById("copyright");
+      cpr.innerHTML =
+        "&copy; 2022 - " + new Date().getFullYear() + " www.kenedylima.com";
+    })();
   }, []);
   return <AppContent programmingLanguages={langBytesOfCode} />;
 }
-
 function startHeroSubTitleAnimation() {
   const spans = document.querySelectorAll(".subtitle-span");
 

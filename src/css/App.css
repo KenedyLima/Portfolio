@@ -173,14 +173,18 @@ header {
 .bar {
   position: absolute;
   width: 0.5rem;
-  height: calc(100% - 6.2rem);
+  height: calc(100% - 14.8rem);
   right: 1.8rem;
   top: 6.2rem;
   background-color: #881337;
 }
 
-.topless-bar {
-  top: 0px;
+.bar::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  display: inline-block;
+  transform: translate(calc(-50% + 0.25rem), -50%);
 }
 
 /*****************/
@@ -237,12 +241,18 @@ header {
 /* SKILLS SECTION */
 /******************/
 
-.skills-container .hard {
+.skills-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-container .hard,
+.skills-container .soft {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4.8rem;
-  row-gap: 9.8rem;
+  row-gap: 7.2rem;
   align-items: start;
   padding: 1.6rem;
 }
@@ -505,4 +515,13 @@ form label {
 form input {
   border-radius: 25px;
   padding: 1.6rem;
+}
+
+/**********/
+/* FOOTER */
+/**********/
+
+footer {
+  border-top: 2px #881337 solid;
+  padding: 3rem;
 }
