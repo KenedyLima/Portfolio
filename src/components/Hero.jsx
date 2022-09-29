@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="nav-header">
         <img
           className="coffee-icon"
-          src={require("../images/coffee-break.png")}
+          src={require("../icons/coffee-break.png")}
           alt=""
         />
         <nav>

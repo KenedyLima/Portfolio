@@ -246,20 +246,35 @@ header {
   flex-direction: column;
 }
 
-.skills-container .hard,
-.skills-container .soft {
+.skills-container .hard-skills,
+.skills-container .soft-skills {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4.8rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7.2rem;
   row-gap: 7.2rem;
   align-items: start;
   padding: 1.6rem;
 }
 
-.skill {
+.skill-type {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.hard-skills .skill {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.soft-skills .skill img {
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+}
+
+.soft-skills .skill-desc-wrapper {
 }
 
 .skill-desc-wrapper {
@@ -272,6 +287,7 @@ header {
 .skill-desc-wrapper span {
   color: #f0f9ff;
   display: inline-block;
+  font-size: 1.2rem;
 }
 
 .skill-logo {
@@ -306,6 +322,10 @@ header {
   margin-bottom: 2.4rem;
   gap: 1.8rem;
   text-transform: uppercase;
+}
+
+.soft-skills.skills-list-hidden {
+  display: none;
 }
 
 /********************/
@@ -522,6 +542,6 @@ form input {
 /**********/
 
 footer {
-  border-top: 2px #881337 solid;
+  border-top: 2px #0a1538e1 solid;
   padding: 3rem;
 }

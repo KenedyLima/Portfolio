@@ -1,4 +1,7 @@
 import React from "react";
+import challengeicon from "../icons/challenges.png";
+import fastLearnerIcon from "../icons/learning.png";
+import groupWorkIcon from "../icons/united.png";
 
 export default function Skills(params) {
   return (
@@ -7,11 +10,8 @@ export default function Skills(params) {
       <span className="doc-section-text">Skills</span>
       <h2>Skills</h2>
       <div className="skills-container">
-        <ion-icon name="chevron-back-outline"></ion-icon>
-        <span>hard</span>
-        <ion-icon name="chevron-forward-outline"></ion-icon>
-
-        <ul className="hard">
+        <h4 className="skill-type-switcher"></h4>
+        <ul className="hard-skills">
           <li className="skill javascript">
             <div className="skill-desc-wrapper">
               <img
@@ -92,11 +92,27 @@ export default function Skills(params) {
             </div>
           </li>
         </ul>
-        <ion-icon name="chevron-back-outline"></ion-icon>
-        <span>Soft</span>
-        <ion-icon name="chevron-forward-outline"></ion-icon>
 
-        <ul className="soft"></ul>
+        <ul className="soft-skills skills-list-hidden">
+          <li className="skill">
+            <div className="skill-desc-wrapper">
+              <img src={fastLearnerIcon} />
+              <span>Fast learner</span>
+            </div>
+          </li>
+          <li className="skill">
+            <div className="skill-desc-wrapper">
+              <img src={challengeicon} />
+              <span>Challenge addicted</span>
+            </div>
+          </li>
+          <li className="skill">
+            <div className="skill-desc-wrapper">
+              <img src={groupWorkIcon} />
+              <span>Group Work</span>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
   );
