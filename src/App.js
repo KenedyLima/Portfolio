@@ -130,6 +130,7 @@ function App() {
       cpr.innerHTML =
         "&copy; 2022 - " + new Date().getFullYear() + " www.kenedylima.com";
     })();
+    listenToSkillTypeSwitcher();
   }, []);
   return <AppContent programmingLanguages={langBytesOfCode} />;
 }
@@ -248,6 +249,20 @@ function listenToProjectsDots() {
   });
 }
 
+function listenToSkillTypeSwitcher() {
+  const buttons = document.querySelectorAll(".skill-switcher-button");
+  const skillsList = document.querySelectorAll(".skills-list");
+  buttons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const target = e.target;
+      console.log(buttons);
+      console.log(skillsList);
+      skillsList.forEach((list) => {
+        list.classList.toggle("skills-list-hidden");
+      });
+    });
+  });
+}
 // HELPERS
 
 function getSlide(newCurrentProjectId) {

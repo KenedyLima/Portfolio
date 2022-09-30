@@ -10,9 +10,17 @@ export default function Skills(params) {
       <span className="doc-section-text">Skills</span>
       <h2>Skills</h2>
       <div className="skills-container">
-        <h4 className="skill-type-switcher"></h4>
-        <ul className="hard-skills">
-          <li className="skill javascript">
+        <div className="skill-type-switcher">
+          <button className="skill-switcher-button">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </button>
+          <h4>HARD</h4>
+          <button className="skill-switcher-button">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </button>
+        </div>
+        <ul className="hard-skills skills-list">
+          <li id="javascript" className="skill">
             <div className="skill-desc-wrapper">
               <img
                 className="skill-logo"
@@ -25,7 +33,7 @@ export default function Skills(params) {
               <div className="completed"></div>
             </div>
           </li>
-          <li className="skill java">
+          <li className="skill" id="java">
             <div className="skill-desc-wrapper">
               <img
                 className="skill-logo"
@@ -38,11 +46,11 @@ export default function Skills(params) {
               <div className="completed"></div>
             </div>
           </li>
-          <li className="skill">
+          <li id="spring" className="skill">
             <div className="skill-desc-wrapper">
               <img
                 className="skill-logo"
-                alt="spring logo"
+                alt="spring"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
               ></img>
               <span>Spring</span>
@@ -51,11 +59,11 @@ export default function Skills(params) {
               <div className="completed"></div>
             </div>
           </li>
-          <li className="skill">
+          <li id="mysql" className="skill">
             <div className="skill-desc-wrapper">
               <img
                 className="skill-logo"
-                alt="myself logo"
+                alt="mysq"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
               ></img>
               <span>MySQL</span>
@@ -78,11 +86,11 @@ export default function Skills(params) {
             </div>
           </li>
 
-          <li className="skill">
+          <li id="react" className="skill">
             <div className="skill-desc-wrapper">
               <img
                 className="skill-logo"
-                alt="react logo"
+                alt="react"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
               ></img>
               <span>React</span>
@@ -93,7 +101,7 @@ export default function Skills(params) {
           </li>
         </ul>
 
-        <ul className="soft-skills skills-list-hidden">
+        <ul className="soft-skills skills-list skills-list-hidden">
           <li className="skill">
             <div className="skill-desc-wrapper">
               <img src={fastLearnerIcon} />

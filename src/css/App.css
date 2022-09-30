@@ -303,15 +303,64 @@ header {
   background: black;
 }
 
-#firebase .skill-bar .completed {
-  background: #881337;
-  width: 70%;
+.skill-bar .completed {
   height: 1rem;
   border-radius: 2.5rem;
+  background: #881337;
+}
+
+#firebase .skill-bar .completed {
+  width: 40%;
+}
+
+#spring .skill-bar .completed {
+  width: 50%;
+}
+
+#java .skill-bar .completed {
+  width: 70%;
+}
+
+#javascript .skill-bar .completed {
+  width: 90%;
+}
+
+#react .skill-bar .completed {
+  width: 50%;
+}
+
+#mysql .skill-bar .completed {
+  width: 40%;
 }
 
 .skill-bar::after {
-  content: "100%";
+  display: inline-block;
+  margin-left: calc(100% - 2.5rem);
+  margin-top: 0.6rem;
+}
+
+#firebase .skill-bar::after {
+  content: "40%";
+}
+
+#spring .skill-bar::after {
+  content: "50%";
+}
+
+#java .skill-bar::after {
+  content: "70%";
+}
+
+#javascript .skill-bar::after {
+  content: "90%";
+}
+
+#react .skill-bar::after {
+  content: "50%";
+}
+
+#mysql .skill-bar::after {
+  content: "40%";
 }
 
 .skill-type-switcher {
@@ -324,7 +373,12 @@ header {
   text-transform: uppercase;
 }
 
-.soft-skills.skills-list-hidden {
+[name="chevron-forward-outline"],
+[name="chevron-back-outline"] {
+  cursor: pointer;
+}
+
+.skills-list-hidden {
   display: none;
 }
 
