@@ -11,11 +11,13 @@ export default function Skills(params) {
       <h2>Skills</h2>
       <div className="skills-container">
         <div className="skill-type-switcher">
-          <button className="skill-switcher-button">
+          <button className="skill-switcher-button previous-skill">
             <ion-icon name="chevron-back-outline"></ion-icon>
           </button>
-          <h4>HARD</h4>
-          <button className="skill-switcher-button">
+          <h4 className="skill-type-active skill-type-text">HARD</h4>
+          <h4 className="skill-type-text">SOFT</h4>
+
+          <button className="skill-switcher-button next-skill">
             <ion-icon name="chevron-forward-outline"></ion-icon>
           </button>
         </div>

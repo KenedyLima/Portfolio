@@ -255,15 +255,24 @@ function listenToSkillTypeSwitcher() {
   buttons.forEach((button) => {
     button.addEventListener("click", (e) => {
       const target = e.target;
-      console.log(buttons);
-      console.log(skillsList);
+      const button = target.closest(".skill-switcher-button");
       skillsList.forEach((list) => {
         list.classList.toggle("skills-list-hidden");
       });
+      toggleSkillActiveTypeText();
     });
   });
 }
 // HELPERS
+
+function toggleSkillActiveTypeText() {
+  const texts = document.querySelectorAll(".skill-type-text");
+  texts.forEach((text) => {
+    text.classList.toggle("skill-type-active");
+    text.classList.add("previous-skill-text-animation");
+  });
+  console.log(texts);
+}
 
 function getSlide(newCurrentProjectId) {
   const projects = document.querySelectorAll(".project");

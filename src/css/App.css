@@ -244,6 +244,7 @@ header {
 .skills-container {
   display: flex;
   flex-direction: column;
+  height: 35rem;
 }
 
 .skills-container .hard-skills,
@@ -378,8 +379,58 @@ header {
   cursor: pointer;
 }
 
-.skills-list-hidden {
+.skills-list.skills-list-hidden {
   display: none;
+}
+
+.skill-switcher-button {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: #f0f9ff;
+  font-size: 2.4rem;
+}
+
+.skill-type-text {
+  display: none;
+}
+
+.skill-type-text.skill-type-active {
+  display: inline-block;
+}
+
+.previous-skill-text-animation {
+  animation: previous-skill-text-animation 300ms ease-in-out;
+}
+
+@keyframes previous-skill-text-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.next-skill-text-animation {
+  animation: previous-skill-text-animation 300ms ease-in-out;
+}
+
+@keyframes previous-skill-text-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /********************/
