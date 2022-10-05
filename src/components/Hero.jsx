@@ -3,7 +3,7 @@ import React from "react";
 export default function Hero() {
   return (
     <header className="main-header">
-      <span className="doc-section-text" id="first-doc-section-text">
+      <span className="doc-section-title" id="first-doc-section-text">
         Introduction
       </span>
       <div className="nav-header">
