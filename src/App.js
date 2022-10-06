@@ -259,19 +259,37 @@ function listenToSkillTypeSwitcher() {
       skillsList.forEach((list) => {
         list.classList.toggle("skills-list-hidden");
       });
-      toggleSkillActiveTypeText();
+      if (button.classList.contains("next-skill"))
+        toggleSkillActiveTypeText("next-skill-text-animation");
+      else toggleSkillActiveTypeText("previous-skill-text-animation");
     });
   });
 }
+
+function sendEmail() {
+  Email.send({
+    Host: "smtp.gmail.com",
+    Username: "K. Lima",
+    Password: "pass",
+    To: "kenedy@gmail.com",
+    From: "you@isp.com",
+    Subject: "This is the subject",
+    Body: "And this is the body",
+  }).then((message) => alert(message));
+}
 // HELPERS
 
-function toggleSkillActiveTypeText() {
+function toggleSkillActiveTypeText(animation) {
   const texts = document.querySelectorAll(".skill-type-text");
+  const activeText = document.querySelector(".skill-type-active");
   texts.forEach((text) => {
     text.classList.toggle("skill-type-active");
-    text.classList.add("previous-skill-text-animation");
+    text.classList.remove("next-skill-text-animation");
+    text.classList.remove("previous-skill-text-animation");
+    if (text !== activeText) text.classList.add(animation);
+    console.log(text.classList);
   });
-  console.log(texts);
+  console.log("animation: " + animation);
 }
 
 function getSlide(newCurrentProjectId) {

@@ -7,23 +7,7 @@ export default function Contacts() {
       <span className="doc-section-text">Contacts</span>
       <h2>Contacts</h2>
       <div className="send-email-card">
-        <div className="email-form">
-          <h2>Send me an Email</h2>
-          <form action="">
-            <div className="label-input">
-              <label htmlFor="subject">Subject</label>
-              <input
-                type="text"
-                id="subject"
-                placeholder="The subject of your contact"
-              />
-            </div>
-            <div className="label-input">
-              <label htmlFor="message">Message</label>
-              <input type="text" placeholder="your message" id="message" />
-            </div>
-          </form>
-        </div>
+        <a href="mailto:kenedytorreslima@gmail.com">Send email</a>
       </div>
       <ul className="social-media-container">
         <li className="social-media">

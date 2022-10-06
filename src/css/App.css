@@ -245,6 +245,7 @@ header {
   display: flex;
   flex-direction: column;
   height: 35rem;
+  transition: all 300ms;
 }
 
 .skills-container .hard-skills,
@@ -256,6 +257,10 @@ header {
   row-gap: 7.2rem;
   align-items: start;
   padding: 1.6rem;
+}
+
+.skills-container .soft-skills {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .skill-type {
@@ -372,6 +377,7 @@ header {
   margin-bottom: 2.4rem;
   gap: 1.8rem;
   text-transform: uppercase;
+  align-self: center;
 }
 
 [name="chevron-forward-outline"],
@@ -381,6 +387,7 @@ header {
 
 .skills-list.skills-list-hidden {
   display: none;
+  opacity: 0;
 }
 
 .skill-switcher-button {
@@ -399,25 +406,10 @@ header {
 
 .skill-type-text.skill-type-active {
   display: inline-block;
+  opacity: 1;
 }
 
 .previous-skill-text-animation {
-  animation: previous-skill-text-animation 300ms ease-in-out;
-}
-
-@keyframes previous-skill-text-animation {
-  0% {
-    opacity: 0;
-    transform: translateX(-50%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.next-skill-text-animation {
   animation: previous-skill-text-animation 300ms ease-in-out;
 }
 
@@ -433,6 +425,21 @@ header {
   }
 }
 
+.next-skill-text-animation {
+  animation: next-skill-text-animation 300ms ease-in;
+}
+
+@keyframes next-skill-text-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 /********************/
 /* PROJECTS SECTION */
 /********************/
