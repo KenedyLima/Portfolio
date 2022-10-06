@@ -2,9 +2,7 @@ import React from "react";
 import challengeicon from "../icons/challenges.png";
 import fastLearnerIcon from "../icons/learning.png";
 import groupWorkIcon from "../icons/united.png";
-import problemSolvingIcon from "../icons/problem-solving.png";
-import teachIcon from "../icons/presentation.png";
-import googleIcon from "../icons/google.png";
+
 export default function Skills(params) {
   return (
     <section className="skills-section" id="skills">
@@ -110,24 +108,6 @@ export default function Skills(params) {
             <div className="skill-desc-wrapper">
               <img src={fastLearnerIcon} />
               <span>Fast learner</span>
-            </div>
-          </li>
-          <li className="skill">
-            <div className="skill-desc-wrapper">
-              <img src={problemSolvingIcon} />
-              <span>Problem Solver</span>
-            </div>
-          </li>
-          <li className="skill">
-            <div className="skill-desc-wrapper">
-              <img src={googleIcon} />
-              <span>Googler</span>
-            </div>
-          </li>
-          <li className="skill">
-            <div className="skill-desc-wrapper">
-              <img src={teachIcon} />
-              <span>Like Teaching</span>
             </div>
           </li>
           <li className="skill">

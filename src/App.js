@@ -73,54 +73,8 @@ let langBytesOfCode = {
 };
 
 function App() {
-  // useEffect(() => {
-  //   async function getAllRepositories() {
-  //     return await fetch(" https://api.github.com/user/repos", {
-  //       headers: {
-  //         Authorization: "token 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",
-  //         Accept: "application/vnd.github+json",
-  //       },
-  //     })
-  //       .then((result) => result.json())
-  //       .then((data) => data);
-  //   }
-
-  //   async function loadBytesOfCodeOfRepositories() {
-  //     const repositories = await getAllRepositories();
-  //     const data = [];
-  //     for (let i = 0; i < repositories.length; i++) {
-  //       const result = await getRepositoryLanguages(repositories[i].name);
-  //       data[i] = await result.json();
-  //     }
-  //     calculateBytesOfCodeByLanguage(data);
-  //   }
-
-  //   function calculateBytesOfCodeByLanguage(ln) {
-  //     ln.forEach((langObj) => {
-  //       const langArr = Object.entries(langObj);
-  //       langArr.forEach((lang) => {
-  //         if (Object.keys(lang).length !== 0) {
-  //           if (!langBytesOfCode.hasOwnProperty(lang[0])) {
-  //             langBytesOfCode[lang[0]] = 0;
-  //           }
-
-  //           langBytesOfCode[lang[0]] += lang[1];
-  //           langBytesOfCode.total += lang[1];
-  //         }
-  //       });
-  //     });
-  //   }
-
-  //   async function getRepositoryLanguages(name) {
-  //     return fetch(
-  //       "https://api.github.com/repos/kenedyLima/" + name + "/languages",
-  //       {}
-  //     );
-  //   }
-
-  //   loadBytesOfCodeOfRepositories();
-  // }, []);
   useEffect(() => {
+    console.log(process.env.MY_EMAIL_PASSWORD);
     listenToLanguageSwitcher();
     startHeroSubTitleAnimation();
     listenToProjectSlideButtons();
@@ -142,6 +96,18 @@ function startHeroSubTitleAnimation() {
       span.classList.toggle("active-word");
     });
   }, 2000);
+}
+
+function sendEmail() {
+  window.Email.send({
+    Host: "smtp.gmail.com",
+    Username: "test",
+    Password: "test.pass",
+    To: "test@gmail.com",
+    From: "client@gmail.com",
+    Subject: "This is the subject",
+    Body: "And this is the body",
+  }).then((message) => alert(message));
 }
 
 // EVENT LISTENERS
@@ -196,29 +162,6 @@ function listenToLanguageSwitcher() {
 function listenToProjectSlideButtons() {
   const buttons = document.querySelectorAll(".slide-button");
   const projects = document.querySelectorAll(".project");
-  // let nextProjectId = 0;
-  // buttons.forEach((button) => {
-  //   button.addEventListener("click", (e) => {
-  //     const currentProjectId = Number(
-  //       document.querySelector(".current-project").getAttribute("project-id")
-  //     );
-  //     const buttonEle = e.target.closest(".slide-button");
-  //     if (buttonEle.classList.contains("next-button"))
-  //       nextProjectId =
-  //         currentProjectId + 1 > projects.length ? 1 : currentProjectId + 1;
-  //     else
-  //       nextProjectId =
-  //         currentProjectId - 1 < 1 ? projects.length : currentProjectId - 1;
-
-  //     projects.forEach((project) => {
-  //       project.classList.remove("current-project");
-  //       if (Number(project.getAttribute("project-id")) === nextProjectId) {
-  //         project.classList.add("current-project");
-  //       }
-  //     });
-  //     updateActiveDot(nextProjectId);
-  //   });
-  // });
   buttons.forEach((button) => {
     button.addEventListener("click", (e) => {
       const buttonElement = e.target.closest(".slide-button");
@@ -259,37 +202,19 @@ function listenToSkillTypeSwitcher() {
       skillsList.forEach((list) => {
         list.classList.toggle("skills-list-hidden");
       });
-      if (button.classList.contains("next-skill"))
-        toggleSkillActiveTypeText("next-skill-text-animation");
-      else toggleSkillActiveTypeText("previous-skill-text-animation");
+      toggleSkillActiveTypeText();
     });
   });
 }
-
-function sendEmail() {
-  Email.send({
-    Host: "smtp.gmail.com",
-    Username: "K. Lima",
-    Password: "pass",
-    To: "kenedy@gmail.com",
-    From: "you@isp.com",
-    Subject: "This is the subject",
-    Body: "And this is the body",
-  }).then((message) => alert(message));
-}
 // HELPERS
 
-function toggleSkillActiveTypeText(animation) {
+function toggleSkillActiveTypeText() {
   const texts = document.querySelectorAll(".skill-type-text");
-  const activeText = document.querySelector(".skill-type-active");
   texts.forEach((text) => {
     text.classList.toggle("skill-type-active");
-    text.classList.remove("next-skill-text-animation");
-    text.classList.remove("previous-skill-text-animation");
-    if (text !== activeText) text.classList.add(animation);
-    console.log(text.classList);
+    text.classList.add("previous-skill-text-animation");
   });
-  console.log("animation: " + animation);
+  console.log(texts);
 }
 
 function getSlide(newCurrentProjectId) {
