@@ -3,10 +3,11 @@ import React from "react";
 export default function Hero() {
   return (
     <header className="main-header">
-      <span className="doc-section-title" id="first-doc-section-text">
+      <span className="section-id-title" id="section-one-id-title">
         Introduction
       </span>
-      <div className="nav-header">
+
+      <div className="nav-container">
         <img
           className="coffee-icon"
           src={require("../icons/coffee-break.png")}

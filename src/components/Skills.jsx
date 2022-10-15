@@ -7,17 +7,17 @@ export default function Skills(params) {
   return (
     <section className="skills-section" id="skills">
       <div className="section-separator"></div>
-      <span className="doc-section-text">Skills</span>
+      <span className="section-id-title">Skills</span>
       <h2>Skills</h2>
       <div className="skills-container">
-        <div className="skill-type-switcher">
-          <button className="skill-switcher-button previous-skill">
+        <div className="skills-type-switcher">
+          <button className="skill-switcher-button previous-skills-button">
             <ion-icon name="chevron-back-outline"></ion-icon>
           </button>
-          <h4 className="skill-type-active skill-type-text">HARD</h4>
-          <h4 className="skill-type-text">SOFT</h4>
+          <h4 className="current-skills-type skills-type-text">HARD</h4>
+          <h4 className="skills-type-text">SOFT</h4>
 
-          <button className="skill-switcher-button next-skill">
+          <button className="skill-switcher-button next-skills-button">
             <ion-icon name="chevron-forward-outline"></ion-icon>
           </button>
         </div>

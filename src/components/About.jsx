@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section className="about-section" id="about">
       <div className="section-separator"></div>
-      <span className="doc-section-text">About</span>
+      <span className="section-id-title">About</span>
 
       <div className="text-card">
         <h2>Know me</h2>

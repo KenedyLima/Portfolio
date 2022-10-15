@@ -64,7 +64,7 @@ header {
 /*     NAV-BAR     */
 /*******************/
 
-.nav-header {
+.nav-container {
   display: flex;
   align-items: center;
   position: absolute;
@@ -87,6 +87,10 @@ header {
   font-size: 1.4rem;
 }
 
+.nav-list li {
+  position: relative;
+}
+
 .nav-list li a:link,
 .nav-list li a:visited {
   cursor: pointer;
@@ -94,10 +98,6 @@ header {
   color: #f0f9ff;
   border-bottom: 1px solid transparent;
   padding: 0.5rem;
-}
-
-.nav-list li {
-  position: relative;
 }
 
 .nav-list li a:link::before {
@@ -108,9 +108,9 @@ header {
   bottom: -7px;
   background-color: transparent;
 }
+
 .nav-list li a:hover::before {
   animation: stretchBorder 0.3s ease-in-out forwards;
-  content: "";
   background-color: #942b4b;
 }
 
@@ -210,16 +210,7 @@ header {
   );
   padding: 7.2rem;
 }
-
-.text-card p {
-  margin-right: 4.8rem;
-}
-
-.text-card h2 {
-  color: #f0f9ff;
-}
 .about-section .image-card {
-  align-self: center;
   height: 80%;
   margin-left: -4.8rem;
   transform: rotateZ(5deg);
@@ -235,6 +226,7 @@ header {
   font-size: 1.8rem;
   margin-bottom: 1.8rem;
   line-height: 1.6;
+  margin-right: 4.8rem;
 }
 
 /******************/
@@ -364,7 +356,7 @@ header {
   content: "40%";
 }
 
-.skill-type-switcher {
+.skills-type-switcher {
   display: flex;
   font-size: 2rem;
   align-items: center;
@@ -393,19 +385,19 @@ header {
   font-size: 2.4rem;
 }
 
-.skill-type-text {
+.skills-type-text {
   display: none;
 }
 
-.skill-type-text.skill-type-active {
+.skills-type-text.current-skills-type {
   display: inline-block;
 }
 
-.previous-skill-text-animation {
-  animation: previous-skill-text-animation 300ms ease-in-out;
+.next-skills-text-animation {
+  animation: next-skills-text-animation 300ms ease-in-out;
 }
 
-@keyframes previous-skill-text-animation {
+@keyframes next-skills-text-animation {
   0% {
     opacity: 0;
     transform: translateX(-50%);
@@ -417,11 +409,11 @@ header {
   }
 }
 
-.next-skill-text-animation {
-  animation: previous-skill-text-animation 300ms ease-in-out;
+.previous-skills-text-animation {
+  animation: previous-skills-text-animation 300ms ease-in-out;
 }
 
-@keyframes previous-skill-text-animation {
+@keyframes previous-skills-text-animation {
   0% {
     opacity: 0;
     transform: translateX(50%);

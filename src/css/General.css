@@ -85,11 +85,11 @@ h3 {
   transform: translate(calc(50% - 0.25rem), -50%);
 }
 
-#first-doc-section-text {
-  top: calc(50% + 6.2rem - 2.5rem);
+#section-one-id-title {
+  top: calc(50% + 3.7rem);
 }
 
-.doc-section-text {
+.section-id-title {
   position: absolute;
   right: 3.2rem;
   top: 50%;

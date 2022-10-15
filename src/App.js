@@ -74,7 +74,7 @@ let langBytesOfCode = {
 
 function App() {
   useEffect(() => {
-    console.log(process.env.MY_EMAIL_PASSWORD);
+    sendEmail();
     listenToLanguageSwitcher();
     startHeroSubTitleAnimation();
     listenToProjectSlideButtons();
@@ -101,10 +101,10 @@ function startHeroSubTitleAnimation() {
 function sendEmail() {
   window.Email.send({
     Host: "smtp.gmail.com",
-    Username: "test",
-    Password: "test.pass",
-    To: "test@gmail.com",
-    From: "client@gmail.com",
+    Username: "test@gmail.comw",
+    Password: "Ken@Google.account2",
+    To: "limaworkon@gmail.com",
+    From: "limaworkon@gmail.com",
     Subject: "This is the subject",
     Body: "And this is the body",
   }).then((message) => alert(message));
@@ -202,19 +202,24 @@ function listenToSkillTypeSwitcher() {
       skillsList.forEach((list) => {
         list.classList.toggle("skills-list-hidden");
       });
-      toggleSkillActiveTypeText();
+      button.classList.contains("previous-skills-button")
+        ? toggleCurrentSkillsTypeText("previous-skills-text-animation")
+        : toggleCurrentSkillsTypeText("next-skills-text-animation");
     });
   });
 }
 // HELPERS
 
-function toggleSkillActiveTypeText() {
-  const texts = document.querySelectorAll(".skill-type-text");
+function toggleCurrentSkillsTypeText(animation) {
+  const texts = document.querySelectorAll(".skills-type-text");
   texts.forEach((text) => {
-    text.classList.toggle("skill-type-active");
-    text.classList.add("previous-skill-text-animation");
+    text.classList.remove("previous-skills-text-animation");
+    text.classList.remove("next-skills-text-animation");
+    text.classList.add(animation);
+    text.classList.toggle("current-skills-type");
   });
   console.log(texts);
+  console.log(animation);
 }
 
 function getSlide(newCurrentProjectId) {
