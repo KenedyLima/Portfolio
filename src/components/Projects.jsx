@@ -7,12 +7,9 @@ export default function Projects() {
   return (
     <section className="projects-section" id="projects">
       <div className="section-separator"></div>
-      <span className="doc-section-text">Projects</span>
+      <span className="section-id-title">Projects</span>
       <h2>Projects</h2>
-      <p>
-        Those are some projects where i implemented, tested and used to improve
-        my skills.
-      </p>
+      <p>Some projects that i coded to build and improve my skills</p>
       <div className="projects-container">
         <button className="previous-button slide-button">
           <ion-icon

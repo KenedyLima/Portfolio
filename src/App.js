@@ -31,6 +31,11 @@ const languagesText = {
     accept any challenge.`,
     ],
     skillsTitle: "Skills",
+    projectsTitle: "Projects",
+    projectsSectionPara:
+      "Some projects that i coded to build and improve my skills as a programmer",
+    repositoryLinkText: "Repository link",
+    contactsTitle: "Contacts",
   },
   portuguese: {
     sectionTexts: [
@@ -65,6 +70,11 @@ const languagesText = {
     accept any challenge.`,
     ],
     skillsTitle: "Skills",
+    projectsTitle: "Projetos",
+    projectsSectionPara:
+      "Alguns projetos que eu codei para construir e aperfeiçoar minhas habilidades como programador",
+    repositoryLinkText: "Link do repositório",
+    contactsTitle: "Contatos",
   },
 };
 
@@ -74,7 +84,6 @@ let langBytesOfCode = {
 
 function App() {
   useEffect(() => {
-    sendEmail();
     listenToLanguageSwitcher();
     startHeroSubTitleAnimation();
     listenToProjectSlideButtons();
@@ -97,19 +106,6 @@ function startHeroSubTitleAnimation() {
     });
   }, 2000);
 }
-
-function sendEmail() {
-  window.Email.send({
-    Host: "smtp.gmail.com",
-    Username: "test@gmail.comw",
-    Password: "Ken@Google.account2",
-    To: "limaworkon@gmail.com",
-    From: "limaworkon@gmail.com",
-    Subject: "This is the subject",
-    Body: "And this is the body",
-  }).then((message) => alert(message));
-}
-
 // EVENT LISTENERS
 
 function listenToLanguageSwitcher() {
@@ -126,7 +122,7 @@ function listenToLanguageSwitcher() {
   });
 
   function loadLanguageContent(language) {
-    const sectionTexts = document.querySelectorAll(".doc-section-text");
+    const sectionTexts = document.querySelectorAll(".section-id-title");
     const navLinks = document.querySelectorAll(".nav-link");
     const heroTitle = document.querySelector(".hero-title");
     const heroEnglishSubTitle = document.querySelector(
@@ -137,6 +133,19 @@ function listenToLanguageSwitcher() {
     );
     const subtitleSpans = document.querySelectorAll(".subtitle-span");
 
+    const knowMeTitle = document
+      .querySelector(".text-card")
+      .getElementsByTagName("h2")[0];
+    const projectsTitle = document
+      .querySelector(".projects-section")
+      .getElementsByTagName("h2")[0];
+    const projectsPara = document
+      .querySelector(".projects-section")
+      .getElementsByTagName("p")[0];
+    const repositoryLinkText = document.querySelector(".repository-link");
+    const contactsTitle = document
+      .querySelector(".contacts-section")
+      .getElementsByTagName("h2")[0];
     for (let i = 0; i < navLinks.length; i++)
       navLinks[i].textContent = languagesText[language].nav[i];
 
@@ -156,6 +165,13 @@ function listenToLanguageSwitcher() {
       span.textContent =
         languagesText[language].heroSubTitle.animationWords[index];
     });
+
+    knowMeTitle.textContent = languagesText[language].knowMeTitle;
+
+    projectsTitle.textContent = languagesText[language].projectsTitle;
+    projectsPara.textContent = languagesText[language].projectsSectionPara;
+    repositoryLinkText.textContent = languagesText[language].repositoryLinkText;
+    contactsTitle.textContent = languagesText[language].contactsTitle;
   }
 }
 
@@ -212,14 +228,17 @@ function listenToSkillTypeSwitcher() {
 
 function toggleCurrentSkillsTypeText(animation) {
   const texts = document.querySelectorAll(".skills-type-text");
+  const classesAnimation = [
+    "previous-skills-text-animation",
+    "next-skills-text-animation",
+  ];
   texts.forEach((text) => {
-    text.classList.remove("previous-skills-text-animation");
-    text.classList.remove("next-skills-text-animation");
+    classesAnimation.forEach((classA) => {
+      text.classList.remove(classA);
+    });
     text.classList.add(animation);
     text.classList.toggle("current-skills-type");
   });
-  console.log(texts);
-  console.log(animation);
 }
 
 function getSlide(newCurrentProjectId) {

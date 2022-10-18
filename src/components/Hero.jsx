@@ -13,6 +13,13 @@ export default function Hero() {
           src={require("../icons/coffee-break.png")}
           alt=""
         />
+        <button className="menu-button">
+          Menu{" "}
+          <ion-icon
+            className="menu-icon"
+            name="chevron-down-outline"
+          ></ion-icon>
+        </button>
         <nav>
           <ul className="nav-list">
             <li>

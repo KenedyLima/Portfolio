@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import Hero from "./Hero";
 import Projects from "./Projects";
 import Skills from "./Skills";
-
+import "../css/queries.css";
 function AppContent({ programmingLanguages }) {
   return (
     <div className="container">

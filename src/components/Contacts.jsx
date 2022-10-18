@@ -4,7 +4,7 @@ export default function Contacts() {
   return (
     <section className="contacts-section" id="contacts">
       <div className="section-separator"></div>
-      <span className="doc-section-text">Contacts</span>
+      <span className="section-id-title">Contacts</span>
       <h2>Contacts</h2>
       <div className="send-email-card">
         <div className="email-form">
