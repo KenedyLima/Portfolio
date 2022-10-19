@@ -167,9 +167,12 @@ header {
   cursor: pointer;
   font-family: "Medium";
   text-transform: uppercase;
+  display: none;
+  font-size: 2.4rem;
 }
 
-.menu-icon {
+[name="chevron-down-outline"] {
+  transform: rotate(180deg);
 }
 /************/
 /* SIDE BAR */

@@ -18,4 +18,30 @@
   html {
     font-size: 4px;
   }
+
+  .menu-button {
+    display: inline-block;
+  }
+
+  .about-section {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+  .mobile-menu .nav-list {
+    position: absolute;
+    top: 150%;
+    right: 50%;
+    transform: translate(50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #942b4b;
+    padding: 1.6rem 3.2rem;
+    border-radius: 5px;
+  }
+
+  .nav-list li a:link,
+  .nav-list li a:visited {
+    color: #0c1946;
+  }
 }

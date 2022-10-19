@@ -13,37 +13,41 @@ export default function Hero() {
           src={require("../icons/coffee-break.png")}
           alt=""
         />
-        <button className="menu-button">
-          Menu{" "}
-          <ion-icon
-            className="menu-icon"
-            name="chevron-down-outline"
-          ></ion-icon>
-        </button>
-        <nav>
-          <ul className="nav-list">
-            <li>
-              <a className="nav-link" href="#about">
-                About
-              </a>
-            </li>
-            <li>
-              <a className="nav-link" href="#skills">
-                Skills
-              </a>
-            </li>
-            <li>
-              <a className="nav-link" href="#projects">
-                projects
-              </a>
-            </li>
-            <li>
-              <a className="nav-link" href="#contacts">
-                Contacts
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <div className="mobile-menu">
+          <button className="menu-button">
+            Menu{" "}
+            <ion-icon
+              className="menu-icon"
+              name="chevron-down-outline"
+            ></ion-icon>
+          </button>
+
+          <nav>
+            <ul className="nav-list">
+              <li>
+                <a className="nav-link" href="#about">
+                  About
+                </a>
+              </li>
+              <li>
+                <a className="nav-link" href="#skills">
+                  Skills
+                </a>
+              </li>
+              <li>
+                <a className="nav-link" href="#projects">
+                  projects
+                </a>
+              </li>
+              <li>
+                <a className="nav-link" href="#contacts">
+                  Contacts
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
         <div className="languages-container">
           <span className="language chosen-language">EN</span>
           <span className="language">PT</span>
