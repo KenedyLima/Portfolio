@@ -174,6 +174,7 @@ header {
 [name="chevron-down-outline"] {
   transform: rotate(180deg);
 }
+
 /************/
 /* SIDE BAR */
 /************/
@@ -237,11 +238,9 @@ header {
 .about-section .image-card {
   height: 80%;
   margin-left: -4.8rem;
-  transform: rotateZ(
-    5deg
-  ); /*
-  background-image: linear-gradient(0, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
-    url("../images/me.jpg");*/
+  transform: rotateZ(5deg);
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../images/me.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -636,12 +635,21 @@ header {
   width: 80%;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  background-color: black;
-  padding: 3.2rem;
+  align-self: center;
+  background-image: linear-gradient(
+    0deg,
+    rgb(12, 25, 70),
+    rgba(148, 43, 74, 0.4),
+    rgb(12, 25, 70)
+  );
+
+  padding: 4.8rem;
+  border-radius: 25px;
 }
 
-.send-email-card h2 {
+.send-email-card h3 {
   text-align: center;
+  text-transform: uppercase;
 }
 
 .label-input {
@@ -651,13 +659,33 @@ header {
   flex-direction: column;
 }
 
+form {
+  margin: 0 auto;
+}
+
 form label {
   font-size: 1.6rem;
 }
 
 form input {
-  border-radius: 25px;
+  border-radius: 10px;
   padding: 1.6rem;
+}
+.send-email-button {
+  width: 100%;
+  background-color: #942b4a;
+  border: none;
+  margin-top: 3.6rem;
+  font-family: "Medium";
+  text-transform: uppercase;
+  color: #f0f9ff;
+  cursor: pointer;
+  transition: 0.3s ease-in-out all;
+}
+
+.send-email-button:hover {
+  color: #942b4a;
+  background-color: #f0f9ff;
 }
 
 /**********/

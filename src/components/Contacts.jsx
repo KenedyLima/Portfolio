@@ -8,20 +8,25 @@ export default function Contacts() {
       <h2>Contacts</h2>
       <div className="send-email-card">
         <div className="email-form">
-          <h2>Send me an Email</h2>
+          <h3>Send me an Email</h3>
           <form action="">
             <div className="label-input">
               <label htmlFor="subject">Subject</label>
               <input
-                type="text"
                 id="subject"
-                placeholder="The subject of your contact"
+                type="text"
+                placeholder="Reason for the contact..."
               />
             </div>
             <div className="label-input">
-              <label htmlFor="message">Message</label>
-              <input type="text" placeholder="your message" id="message" />
+              <label htmlFor="Message">Message</label>
+              <input
+                id="Message"
+                type="message"
+                placeholder="Your message..."
+              />
             </div>
+            <input type="submit" value="Send" className="send-email-button" />
           </form>
         </div>
       </div>

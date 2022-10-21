@@ -88,6 +88,8 @@ function App() {
     startHeroSubTitleAnimation();
     listenToProjectSlideButtons();
     listenToProjectsDots();
+    listenToMobileMenu();
+    listenToSendEmailButton();
     (function () {
       let cpr = document.getElementById("copyright");
       cpr.innerHTML =
@@ -222,6 +224,22 @@ function listenToSkillTypeSwitcher() {
         ? toggleCurrentSkillsTypeText("previous-skills-text-animation")
         : toggleCurrentSkillsTypeText("next-skills-text-animation");
     });
+  });
+}
+
+function listenToMobileMenu() {
+  const menuButton = document.querySelector(".menu-button");
+  const navList = document.querySelector(".nav-list");
+  menuButton.addEventListener("click", () => {
+    navList.classList.toggle("opened");
+  });
+}
+
+function listenToSendEmailButton() {
+  const sendEMailButton = document.querySelector(".send-email-button");
+  sendEMailButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log(e.target);
   });
 }
 // HELPERS

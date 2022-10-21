@@ -33,11 +33,27 @@
     top: 150%;
     right: 50%;
     transform: translate(50%);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: #942b4b;
+    background-color: #f0f9ff;
     padding: 1.6rem 3.2rem;
     border-radius: 5px;
+  }
+
+  .opened {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .opened::after {
+    content: "";
+    border-bottom: #f0f9ff solid 40px;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: calc((105px - 40.8px) / 2 - 30px + 5.55px);
+    top: -41%;
+    z-index: -1;
   }
 
   .nav-list li a:link,
