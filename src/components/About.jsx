@@ -5,35 +5,33 @@ export default function About() {
     <section className="about-section" id="about">
       <div className="section-separator"></div>
       <span className="section-id-title">About</span>
-
       <div className="text-card">
         <h2>Know me</h2>
         <p className="about-script">
-          Wassup! I am Kenedy Lima, Back End Junior Developer, great thinker and
-          creative as needed.
-        </p>{" "}
+          Wassup! My names is Kenedy Lima, 16 years old. Currently in High
+          School
+        </p>
+
         <p className="about-script">
-          Currently aiming to improve and aggregate to our society by creating
-          problems and giving the necessary solution to it, thus creating
-          innovative and efficient alternatives to different kind of issues.
+          Right now i'm aiming to get my first job as a developer to init my
+          professional career. As well as aggregate to our society by
+          understanding it's current problems and developing solid, innovative
+          and efficient solutions to it
         </p>
         <p className="about-script">
-          Different perspectives is the THING to me. Since better results comes
-          from different experiences, share and get feedback is a good way of
-          improvement.
+          I'm an individual who likes to think about all aspects of life, and
+          discuss about it. Hoping to come up with a better solution or at least
+          some answer to that bug
         </p>
         <p className="about-script">
-          I am a excellent seacher (googler), so i am prepared to face and
-          accept any challenge.
+          As a person born in Generation Z, googling probably is the top level
+          skill that i have. Leveling up each day as my skills and knowledge
+          improve in the IT area
         </p>
         <p className="about-script">
-          Different perspectives is the THING to me. Since better results comes
-          from different experiences, share and get feedback is a good way of
-          improvement.
-        </p>
-        <p className="about-script">
-          I am a excellent seacher (googler), so i am prepared to face and
-          accept any challenge.
+          For that reason, challenges are to me, if conquered, sets of new
+          weapons and armors to my character. And for reaching and defeating the
+          boss, i'm willing to accept any.
         </p>
       </div>
       <div className="image-card"></div>

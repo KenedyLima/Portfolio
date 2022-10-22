@@ -20,7 +20,7 @@
   }
 
   .menu-button {
-    display: inline-block;
+    display: flex;
   }
 
   .about-section {
@@ -34,30 +34,36 @@
     right: 50%;
     transform: translate(50%);
     background-color: #f0f9ff;
-    padding: 1.6rem 3.2rem;
+    padding: 1.2rem 2.4rem;
     border-radius: 5px;
   }
 
   .opened {
     display: grid;
     grid-template-columns: 1fr 1fr;
-  }
-
-  .opened::after {
-    content: "";
-    border-bottom: #f0f9ff solid 40px;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
-    width: 0;
-    height: 0;
-    position: absolute;
-    right: calc((105px - 40.8px) / 2 - 30px + 5.55px);
-    top: -41%;
-    z-index: -1;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.2rem;
   }
 
   .nav-list li a:link,
   .nav-list li a:visited {
     color: #0c1946;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-list li a:hover::before {
+    animation: none;
+  }
+
+  .nav-list li a:hover {
+    color: #942b4b;
+  }
+  .icon-wrapper {
+    transition: 0.3s ease-in-out;
+  }
+
+  .menu-icon-rotated {
+    transform: rotate(180deg);
   }
 }

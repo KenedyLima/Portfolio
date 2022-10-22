@@ -15,11 +15,13 @@ export default function Hero() {
         />
         <div className="mobile-menu">
           <button className="menu-button">
-            Menu{" "}
-            <ion-icon
-              className="menu-icon"
-              name="chevron-down-outline"
-            ></ion-icon>
+            Menu
+            <div className="icon-wrapper">
+              <ion-icon
+                className="menu-icon"
+                name="chevron-down-outline"
+              ></ion-icon>
+            </div>
           </button>
 
           <nav>

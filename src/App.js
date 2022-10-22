@@ -14,21 +14,25 @@ const languagesText = {
     },
     knowMeTitle: "Know me",
     knowMeScript: [
-      `Wassup! I am Kenedy Lima, Back End Junior Developer, great thinker and
-    creative as needed.`,
-      ` Currently aiming to improve and aggregate to our society by creating
-    problems and giving the necessary solution to it, thus creating
-    innovative and efficient alternatives to different kind of issues.`,
-      `Different perspectives is the THING to me. Since better results comes
-    from different experiences, share and get feedback is a good way of
-    improvement.`,
-      `I am a excellent seacher (googler), so i am prepared to face and
-    accept any challenge.`,
-      `Different perspectives is the THING to me. Since better results comes
-    from different experiences, share and get feedback is a good way of
-    improvement.`,
-      `I am a excellent seacher (googler), so i am prepared to face and
-    accept any challenge.`,
+      `Wassup! My names is Kenedy Lima, 16 years old. Currently in High
+      School`,
+      ` Right now i'm aiming to get my first job as a developer to init my
+      professional career. As well as aggregate to our society by
+      understanding it's current problems and developing solid, innovative
+      and efficient solutions to it
+    `,
+      `  I'm an individual who likes to think about all aspects of life, and
+      discuss about it. Hoping to come up with a better solution or at least
+      some answer to that bug
+    `,
+      `  As a person born in Generation Z, googling probably is the top level
+      skill that i have. Leveling up each day as my skills and knowledge
+      improve in the IT area
+    `,
+      `  For that reason, challenges are to me, if conquered, sets of new
+      weapons and armors to my character. And for reaching and defeating the
+      boss, i'm willing to accept any.
+    `,
     ],
     skillsTitle: "Skills",
     projectsTitle: "Projects",
@@ -36,6 +40,17 @@ const languagesText = {
       "Some projects that i coded to build and improve my skills as a programmer",
     repositoryLinkText: "Repository link",
     contactsTitle: "Contacts",
+
+    contactsPara: "Reach me on my social media",
+    contactsOr: "Or",
+    contactsForm: {
+      header: "Send me an email",
+      labels: ["Subject", "Message"],
+      inputs: ["The reason for your contact...", "Your message..."],
+    },
+
+    emailButton: "Send",
+    softSkills: ["Fast Learner", "Challenge addicted", "Group Work"],
   },
   portuguese: {
     sectionTexts: [
@@ -53,21 +68,11 @@ const languagesText = {
     },
     knowMeTitle: "Me Conheça",
     knowMeScript: [
-      `Wassup! I am Kenedy Lima, Back End Junior Developer, great thinker and
-    creative as needed.`,
-      ` Currently aiming to improve and aggregate to our society by creating
-    problems and giving the necessary solution to it, thus creating
-    innovative and efficient alternatives to different kind of issues.`,
-      `Different perspectives is the THING to me. Since better results comes
-    from different experiences, share and get feedback is a good way of
-    improvement.`,
-      `I am a excellent seacher (googler), so i am prepared to face and
-    accept any challenge.`,
-      `Different perspectives is the THING to me. Since better results comes
-    from different experiences, share and get feedback is a good way of
-    improvement.`,
-      `I am a excellent seacher (googler), so i am prepared to face and
-    accept any challenge.`,
+      `Me chamo Kenedy Lima, tenho 16 anos e atualmente cursando o ensino médio`,
+      `No momento estou com o objetivo de conseguir meu primeiro emprego como um desenvolvedor para iniciar minha carreira profissional. E também agregar em nossa sociedade, entendendo seus problemas e desenvolvendo soluções sólidas, eficientes e inovativas para os mesmos`,
+      `Sou um indivíduo que gosta de refletir sobre todos os aspectos da vida, e discutir sobre isso. Com o intuito de conseguir a melhor solução possível, ou pelo menos alguma resposta para o motivo da existência desse bug`,
+      `Sendo uma pessoa nascida na Geração Z, googlar provavelmente é umas das melhores habilidades que eu tenho. Que melhora a cada dia juntamente com minhas habilidades e conhecimentos na área de TI`,
+      `Por esse motivo, desafios, se conquistados, são para mim como novas armas e conjuntos para o meu personagem. E para alcançar e derrotar o chefão, aceitarei quaisquer`,
     ],
     skillsTitle: "Skills",
     projectsTitle: "Projetos",
@@ -75,6 +80,19 @@ const languagesText = {
       "Alguns projetos que eu codei para construir e aperfeiçoar minhas habilidades como programador",
     repositoryLinkText: "Link do repositório",
     contactsTitle: "Contatos",
+    contactsPara: "Contate-me em minhas redes sociais",
+    contactsOr: "Ou",
+    contactsForm: {
+      header: "Envie-me um email",
+      labels: ["Assunto", "Mensagem"],
+      inputs: ["A razão para o seu contato...", "Sua mensagem..."],
+    },
+    emailButton: "Enviar",
+    softSkills: [
+      "Aprendizagem Rápida",
+      "Fascinado por desafios",
+      "Trabalho em grupo",
+    ],
   },
 };
 
@@ -116,8 +134,9 @@ function listenToLanguageSwitcher() {
   languagesContainer.addEventListener("click", (e) => {
     if (e.target.classList.contains("language")) {
       languages.forEach((language) => {
-        language.classList.toggle("chosen-language");
+        language.classList.remove("chosen-language");
       });
+      e.target.classList.add("chosen-language");
       if (e.target.textContent === "EN") loadLanguageContent("english");
       else loadLanguageContent("portuguese");
     }
@@ -138,16 +157,30 @@ function listenToLanguageSwitcher() {
     const knowMeTitle = document
       .querySelector(".text-card")
       .getElementsByTagName("h2")[0];
+
+    const knowMeScript = document.querySelectorAll(".about-script");
+
     const projectsTitle = document
       .querySelector(".projects-section")
       .getElementsByTagName("h2")[0];
     const projectsPara = document
       .querySelector(".projects-section")
       .getElementsByTagName("p")[0];
-    const repositoryLinkText = document.querySelector(".repository-link");
+    const repositoryLinkText = document.querySelectorAll(".repository-link");
     const contactsTitle = document
       .querySelector(".contacts-section")
       .getElementsByTagName("h2")[0];
+
+    const contactsPara = document.querySelector(".social-media-p");
+    const or = document.querySelector(".or-h3");
+    const formHeader = document.querySelector(".form-header");
+    const labels = document.getElementsByTagName("label");
+    const inputs = document.getElementsByTagName("input");
+    const sendEmailButton = document.querySelector(".send-email-button");
+    const softSkills = document
+      .querySelector(".soft-skills")
+      .getElementsByTagName("span");
+
     for (let i = 0; i < navLinks.length; i++)
       navLinks[i].textContent = languagesText[language].nav[i];
 
@@ -172,8 +205,26 @@ function listenToLanguageSwitcher() {
 
     projectsTitle.textContent = languagesText[language].projectsTitle;
     projectsPara.textContent = languagesText[language].projectsSectionPara;
-    repositoryLinkText.textContent = languagesText[language].repositoryLinkText;
+    repositoryLinkText.forEach((link) => {
+      link.textContent = languagesText[language].repositoryLinkText;
+    });
+
     contactsTitle.textContent = languagesText[language].contactsTitle;
+    knowMeScript.forEach((script, index) => {
+      script.textContent = languagesText[language].knowMeScript[index];
+    });
+    contactsPara.textContent = languagesText[language].contactsPara;
+    or.textContent = languagesText[language].contactsOr;
+    formHeader.textContent = languagesText[language].contactsForm.header;
+    for (let i = 0; i < labels.length; i++) {
+      labels[i].textContent = languagesText[language].contactsForm.labels[i];
+      inputs[i].placeholder = languagesText[language].contactsForm.inputs[i];
+    }
+    for (let i = 0; i < softSkills.length; i++) {
+      softSkills[i].textContent = languagesText[language].softSkills[i];
+    }
+    console.log(softSkills);
+    sendEmailButton.textContent = languagesText[language].emailButton;
   }
 }
 
@@ -232,17 +283,46 @@ function listenToMobileMenu() {
   const navList = document.querySelector(".nav-list");
   menuButton.addEventListener("click", () => {
     navList.classList.toggle("opened");
+    rotateMenuIcon();
   });
 }
 
 function listenToSendEmailButton() {
   const sendEMailButton = document.querySelector(".send-email-button");
+  const event = new Event("click");
   sendEMailButton.addEventListener("click", (e) => {
-    e.preventDefault();
-    console.log(e.target);
+    const subject = document.querySelector(".subject-field").value;
+    const message = document.querySelector(".message-field").value;
+    /*    if (subject !== "" && message !== "") {
+      sendEMailButton.setAttribute(
+        "href",
+        `mailto:kenedytorreslima@gmail.com?subject=${subject}&body=${message}`
+      );
+      sendEMailButton.dispatchEvent(event);
+      clearInputFields();
+    } else {
+      showRequiredText([subject, message]);
+      console.log(message);
+    }*/
+    sendEMailButton.setAttribute(
+      "href",
+      `mailto:kenedytorreslima@gmail.com?subject=${subject}&body=${message}`
+    );
+    clearInputFields();
   });
+  sendEMailButton.dispatchEvent(event);
 }
 // HELPERS
+
+function rotateMenuIcon() {
+  const iconWrapper = document.querySelector(".icon-wrapper");
+  iconWrapper.classList.toggle("menu-icon-rotated");
+}
+
+function clearInputFields() {
+  const emailForm = document.querySelector(".email-form");
+  emailForm.reset();
+}
 
 function toggleCurrentSkillsTypeText(animation) {
   const texts = document.querySelectorAll(".skills-type-text");
@@ -278,4 +358,12 @@ function updateActiveDot(id) {
   });
 }
 
+function showRequiredText(fields) {
+  const requiredTextEle = document.querySelectorAll(".required-p");
+  console.log(requiredTextEle);
+  requiredTextEle.forEach((ele, index) => {
+    if (fields[index] === "") ele.style.display = "inline-block";
+    if (fields[index] !== "") ele.style.display = "none";
+  });
+}
 export default App;

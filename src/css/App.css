@@ -157,7 +157,6 @@ header {
   position: absolute;
   right: 50%;
   transform: translate(50%);
-  display: flex;
   align-items: center;
   justify-content: center;
   gap: 1.2rem;
@@ -169,10 +168,7 @@ header {
   text-transform: uppercase;
   display: none;
   font-size: 2.4rem;
-}
-
-[name="chevron-down-outline"] {
-  transform: rotate(180deg);
+  box-shadow: none;
 }
 
 /************/
@@ -180,7 +176,6 @@ header {
 /************/
 .bar::before {
   content: "";
-  text-align: center;
   display: inline-block;
   transform: translate(calc(-50% + 0.25rem), 0%);
 }
@@ -197,20 +192,20 @@ header {
 .bar {
   position: absolute;
   width: 0.5rem;
-  height: calc(100% - 14.8rem);
+  height: calc(100% - 6.2rem - 4.45rem);
   right: 1.8rem;
   top: 6.2rem;
   background-color: #881337;
 }
-/*
+
 .bar::after {
   content: "";
   position: absolute;
   top: 100%;
+
+  transform: translate(calc(-50% - 1.8rem - 0.5rem), -50%);
   display: inline-block;
-  transform: translate(calc(-50% + 0.25rem), -50%);
 }
-*/
 
 /*****************/
 /* ABOUT SECTION */
@@ -239,7 +234,7 @@ header {
   height: 80%;
   margin-left: -4.8rem;
   transform: rotateZ(5deg);
-  background-image: linear-gradient(0, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)),
     url("../images/me.jpeg");
   background-position: center;
   background-size: cover;
@@ -248,7 +243,7 @@ header {
 }
 
 .about-script {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   margin-bottom: 1.8rem;
   line-height: 1.6;
   margin-right: 4.8rem;
@@ -275,6 +270,10 @@ header {
   padding: 1.6rem;
 }
 
+.skills-container .soft-skills {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .skill-type {
   font-size: 2rem;
   text-align: center;
@@ -290,9 +289,6 @@ header {
   width: 5rem;
   height: 5rem;
   display: inline-block;
-}
-
-.soft-skills .skill-desc-wrapper {
 }
 
 .skill-desc-wrapper {
@@ -459,10 +455,6 @@ header {
   font-size: 1.6rem;
 }
 
-.projects-section h2 {
-  margin-bottom: 2rem;
-}
-
 .projects-section h3 {
   margin-bottom: 0.8rem;
 }
@@ -599,7 +591,8 @@ header {
   list-style: none;
   font-size: 1.6rem;
   display: flex;
-  gap: 3.2rem;
+  gap: 4.8rem;
+  margin-top: 2rem;
 }
 
 .social-media a {
@@ -632,19 +625,14 @@ header {
 }
 
 .send-email-card {
-  width: 80%;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  align-self: center;
+  width: 60%;
   background-image: linear-gradient(
     0deg,
     rgb(12, 25, 70),
     rgba(148, 43, 74, 0.4),
     rgb(12, 25, 70)
   );
-
-  padding: 4.8rem;
-  border-radius: 25px;
+  border-radius: 2.5rem;
 }
 
 .send-email-card h3 {
@@ -654,33 +642,54 @@ header {
 
 .label-input {
   display: flex;
-  margin-top: 1.6rem;
+  margin-top: 3rem;
   gap: 0.8rem;
   flex-direction: column;
+  position: relative;
 }
 
-form {
-  margin: 0 auto;
+.email-form-wrapper {
+  padding: 4.8rem;
 }
 
-form label {
+form label,
+form input,
+.send-email-button {
   font-size: 1.6rem;
 }
 
-form input {
-  border-radius: 10px;
+form input,
+.send-email-button {
+  border-radius: 1rem;
   padding: 1.6rem;
 }
+
+.required-p {
+  position: absolute;
+  display: none;
+  right: 0;
+  top: 0;
+  font-size: 1.2rem;
+  color: #f0f9ff;
+}
+
+.required-p span {
+  color: #942b4a;
+}
 .send-email-button {
-  width: 100%;
+  width: 31.77rem;
+  margin-left: calc(100% - 31.77rem);
+  display: inline-block;
   background-color: #942b4a;
   border: none;
-  margin-top: 3.6rem;
+  margin-top: 3rem;
   font-family: "Medium";
   text-transform: uppercase;
   color: #f0f9ff;
   cursor: pointer;
   transition: 0.3s ease-in-out all;
+  text-align: center;
+  text-decoration: none;
 }
 
 .send-email-button:hover {
@@ -688,11 +697,25 @@ form input {
   background-color: #f0f9ff;
 }
 
+.h3-wrapper {
+  width: 60%;
+  text-align: center;
+}
+
+.or-h3 {
+  margin-top: 4.8rem;
+  margin-bottom: 4.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.social-media-p {
+  font-size: 1.6rem;
+}
 /**********/
 /* FOOTER */
 /**********/
 
 footer {
-  border-top: 2px #0a1538e1 solid;
-  padding: 3rem;
+  padding: 1.6rem;
 }

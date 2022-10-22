@@ -61,7 +61,7 @@ h2 {
   font-family: "Bold";
   text-transform: uppercase;
   font-size: 3rem;
-  margin-bottom: 3.6rem;
+  margin-bottom: 3rem;
   letter-spacing: 1.2px;
 }
 
@@ -70,7 +70,6 @@ h3 {
   font-family: "Medium";
   font-size: 2.4rem;
   margin-bottom: 2.4rem;
-  /*color: #f0f9ffbd;*/
   color: #f0f9ff;
 }
 .section-separator {
