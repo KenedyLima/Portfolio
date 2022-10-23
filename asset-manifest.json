@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.7daa414c.css",
+    "main.js": "/Portfolio/static/js/main.43c5a8b8.js",
+    "static/media/ForkifyProject.png": "/Portfolio/static/media/ForkifyProject.8388b58dc3a5704adefb.png",
+    "static/media/MaptyProject.png": "/Portfolio/static/media/MaptyProject.718060f008a55c14d795.png",
+    "static/media/OmnifoodProject.png": "/Portfolio/static/media/OmnifoodProject.dad1cd835da68b6ab6ae.png",
+    "static/media/Inter-Black.ttf": "/Portfolio/static/media/Inter-Black.143c28420846d45c5834.ttf",
+    "static/media/Inter-Bold.ttf": "/Portfolio/static/media/Inter-Bold.88fa7ae373b07b41ecce.ttf",
+    "static/media/Inter-Medium.ttf": "/Portfolio/static/media/Inter-Medium.6dcbc9bed1ec438907ee.ttf",
+    "static/media/me.jpeg": "/Portfolio/static/media/me.d7b59f7f965f9d984680.jpeg",
+    "static/media/gmail-logo.png": "/Portfolio/static/media/gmail-logo.1926679ea816e645579b.png",
+    "static/media/challenges.png": "/Portfolio/static/media/challenges.035f16a030cf6b535b88.png",
+    "static/media/united.png": "/Portfolio/static/media/united.ff6720ecb4e1e4ef46dd.png",
+    "static/media/Portfolio.png": "/Portfolio/static/media/Portfolio.a96b2736faf528901915.png",
+    "static/media/learning.png": "/Portfolio/static/media/learning.879383a9ed9053bde165.png",
+    "static/media/coffee-break.png": "/Portfolio/static/media/coffee-break.f85f572bf9e533efba60.png",
+    "index.html": "/Portfolio/index.html",
+    "main.7daa414c.css.map": "/Portfolio/static/css/main.7daa414c.css.map",
+    "main.43c5a8b8.js.map": "/Portfolio/static/js/main.43c5a8b8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7daa414c.css",
+    "static/js/main.43c5a8b8.js"
+  ]
+}
