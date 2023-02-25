@@ -1,6 +1,14 @@
 import React from "react";
 
 export default function About() {
+
+  const getAge = function() {
+    const birthDate = Date.parse('2005-11-04');
+    console.log(birthDate)
+  }
+
+  getAge();
+
   return (
     <section className="about-section" id="about">
       <div className="section-separator"></div>
@@ -8,7 +16,7 @@ export default function About() {
       <div className="text-card">
         <h2>Know me</h2>
         <p className="about-script">
-          Wassup! My names is Kenedy Lima, 16 years old. Currently in High
+          Wassup! My names is Kenedy Lima, 17 years old. Currently in High
           School
         </p>
 
