@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.e75e7b53.css",
-    "main.js": "/Portfolio/static/js/main.085d0ce4.js",
-    "static/media/me.jpg": "/Portfolio/static/media/me.08fd481589be5e5447b9.jpg",
+    "main.css": "/Portfolio/static/css/main.f75e274f.css",
+    "main.js": "/Portfolio/static/js/main.62f85ea3.js",
+    "static/media/me2.jpg": "/Portfolio/static/media/me2.d7f3a6180d63f823a8e9.jpg",
     "static/media/ForkifyProject.png": "/Portfolio/static/media/ForkifyProject.8388b58dc3a5704adefb.png",
     "static/media/MaptyProject.png": "/Portfolio/static/media/MaptyProject.718060f008a55c14d795.png",
     "static/media/OmnifoodProject.png": "/Portfolio/static/media/OmnifoodProject.dad1cd835da68b6ab6ae.png",
@@ -16,11 +16,11 @@
     "static/media/learning.png": "/Portfolio/static/media/learning.879383a9ed9053bde165.png",
     "static/media/coffee-break.png": "/Portfolio/static/media/coffee-break.f85f572bf9e533efba60.png",
     "index.html": "/Portfolio/index.html",
-    "main.e75e7b53.css.map": "/Portfolio/static/css/main.e75e7b53.css.map",
-    "main.085d0ce4.js.map": "/Portfolio/static/js/main.085d0ce4.js.map"
+    "main.f75e274f.css.map": "/Portfolio/static/css/main.f75e274f.css.map",
+    "main.62f85ea3.js.map": "/Portfolio/static/js/main.62f85ea3.js.map"
   },
   "entrypoints": [
-    "static/css/main.e75e7b53.css",
-    "static/js/main.085d0ce4.js"
+    "static/css/main.f75e274f.css",
+    "static/js/main.62f85ea3.js"
   ]
 }
