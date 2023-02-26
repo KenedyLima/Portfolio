@@ -14,7 +14,7 @@ const languagesText = {
     },
     knowMeTitle: "Know me",
     knowMeScript: [
-      `Wassup! My names is Kenedy Lima, 16 years old. Currently in High
+      `Wassup! My names is Kenedy Lima, 17 years old. Currently in High
       School`,
       ` Right now i'm aiming to get my first job as a developer to init my
       professional career. As well as aggregate to our society by
@@ -68,7 +68,7 @@ const languagesText = {
     },
     knowMeTitle: "Me Conheça",
     knowMeScript: [
-      `Me chamo Kenedy Lima, tenho 16 anos e atualmente cursando o ensino médio`,
+      `Me chamo Kenedy Lima, tenho 17 anos e atualmente cursando o ensino médio`,
       `No momento estou com o objetivo de conseguir meu primeiro emprego como um desenvolvedor para iniciar minha carreira profissional. E também agregar em nossa sociedade, entendendo seus problemas e desenvolvendo soluções sólidas, eficientes e inovativas para os mesmos`,
       `Sou um indivíduo que gosta de refletir sobre todos os aspectos da vida, e discutir sobre isso. Com o intuito de conseguir a melhor solução possível, ou pelo menos alguma resposta para o motivo da existência desse bug`,
       `Sendo uma pessoa nascida na Geração Z, googlar provavelmente é umas das melhores habilidades que eu tenho. Que melhora a cada dia juntamente com minhas habilidades e conhecimentos na área de TI`,
