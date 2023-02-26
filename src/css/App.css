@@ -235,7 +235,7 @@ header {
   margin-left: -4.8rem;
   transform: rotateZ(5deg);
   background-image: linear-gradient(0, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url("../images/me2.jpeg");
+    url("../images/me2.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
